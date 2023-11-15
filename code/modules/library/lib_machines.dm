@@ -34,7 +34,7 @@
 
 /obj/machinery/librarypubliccomp/attack_hand(var/mob/user as mob)
 	usr.set_machine(src)
-	var/dat = "<HEAD><TITLE>Library Visitor</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
+	var/dat = "<HEAD><TITLE>Library Visitor</TITLE></HEAD><meta charset=UTF-8><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
 	switch(screenstate)
 		if(0)
 			dat += {"<h2>Search Settings</h2><br>
@@ -170,7 +170,7 @@
 
 /obj/machinery/librarycomp/attack_hand(var/mob/user as mob)
 	usr.set_machine(src)
-	var/dat = "<HEAD><TITLE>Book Inventory Management</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
+	var/dat = "<HEAD><TITLE>Book Inventory Management</TITLE></HEAD><meta charset=UTF-8><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
 	switch(screenstate)
 		if(0)
 			// Main Menu
@@ -458,7 +458,7 @@
 
 /obj/machinery/libraryscanner/attack_hand(var/mob/user as mob)
 	usr.set_machine(src)
-	var/dat = "<HEAD><TITLE>Scanner Control Interface</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
+	var/dat = "<HEAD><TITLE>Scanner Control Interface</TITLE></HEAD><meta charset=UTF-8><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
 	if(cache)
 		dat += "<FONT color=#005500>Data stored in memory.</FONT><BR>"
 	else

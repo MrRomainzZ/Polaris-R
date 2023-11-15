@@ -326,9 +326,9 @@ Book Cart End
 	if(istype(pages[page], /obj/item/paper))
 		var/obj/item/paper/P = W
 		if(!(istype(usr, /mob/living/carbon/human) || isobserver(usr) || istype(usr, /mob/living/silicon)))
-			dat += "<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY>[stars(P.info)][P.stamps]</BODY></HTML>"
+			dat += "<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><meta charset=UTF-8><BODY>[stars(P.info)][P.stamps]</BODY></HTML>"
 		else
-			dat += "<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY>[P.info][P.stamps]</BODY></HTML>"
+			dat += "<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><meta charset=UTF-8><BODY>[P.info][P.stamps]</BODY></HTML>"
 		user << browse(dat, "window=[name]")
 	else if(istype(pages[page], /obj/item/photo))
 		var/obj/item/photo/P = W
@@ -340,9 +340,9 @@ Book Cart End
 		+ "</body></html>", "window=[name]")
 	else if(!isnull(pages[page]))
 		if(!(istype(usr, /mob/living/carbon/human) || isobserver(usr) || istype(usr, /mob/living/silicon)))
-			dat += "<HTML><HEAD><TITLE>Page [page]</TITLE></HEAD><BODY>[stars(pages[page])]</BODY></HTML>"
+			dat += "<HTML><HEAD><TITLE>Page [page]</TITLE></HEAD><meta charset=UTF-8><BODY>[stars(pages[page])]</BODY></HTML>"
 		else
-			dat += "<HTML><HEAD><TITLE>Page [page]</TITLE></HEAD><BODY>[pages[page]]</BODY></HTML>"
+			dat += "<HTML><HEAD><TITLE>Page [page]</TITLE></HEAD><meta charset=UTF-8><BODY>[pages[page]]</BODY></HTML>"
 		user << browse(dat, "window=[name]")
 
 /obj/item/book/bundle/attack_self(mob/user as mob)
