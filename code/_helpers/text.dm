@@ -30,7 +30,7 @@
 //Simply removes < and > and limits the length of the message
 /proc/strip_html_simple(var/t,var/limit=MAX_MESSAGE_LEN)
 	var/list/strip_chars = list("<",">")
-	t = copytext(t,1,limit)
+	t = copytext_char(t,1,limit)
 	for(var/char in strip_chars)
 		var/index = findtext(t, char)
 		while(index)
@@ -146,10 +146,10 @@
 
 //Returns null if there is any bad text in the string
 /proc/reject_bad_text(var/text, var/max_length=512)
-	if(length(text) > max_length)	return			//message too long
+	if(length_char(text) > max_length)	return			//message too long
 	var/non_whitespace = 0
-	for(var/i=1, i<=length(text), i++)
-		switch(text2ascii(text,i))
+	for(var/i=1, i<=length_char(text), i++)
+		switch(text2ascii_char(text,i))
 			if(62,60,92,47)	return			//rejects the text if it contains these bad characters: <, >, \ or /
 			if(127 to 255)	return			//rejects weird letters like �
 			if(0 to 31)		return			//more weird stuff
@@ -184,21 +184,21 @@
 /proc/dd_hasprefix(text, prefix)
 	var/start = 1
 	var/end = length(prefix) + 1
-	return findtext(text, prefix, start, end)
+	return findtext_char(text, prefix, start, end)
 
 //Checks the beginning of a string for a specified sub-string. This proc is case sensitive
 //Returns the position of the substring or 0 if it was not found
 /proc/dd_hasprefix_case(text, prefix)
 	var/start = 1
 	var/end = length(prefix) + 1
-	return findtextEx(text, prefix, start, end)
+	return findtextEx_char(text, prefix, start, end)
 
 //Checks the end of a string for a specified substring.
 //Returns the position of the substring or 0 if it was not found
 /proc/dd_hassuffix(text, suffix)
 	var/start = length(text) - length(suffix)
 	if(start)
-		return findtext(text, suffix, start, null)
+		return findtext_char(text, suffix, start, null)
 	return
 
 //Checks the end of a string for a specified substring. This proc is case sensitive
@@ -206,14 +206,14 @@
 /proc/dd_hassuffix_case(text, suffix)
 	var/start = length(text) - length(suffix)
 	if(start)
-		return findtextEx(text, suffix, start, null)
+		return findtextEx_char(text, suffix, start, null)
 
 /*
  * Text modification
  */
 /proc/replace_characters(var/t,var/list/repl_chars)
 	for(var/char in repl_chars)
-		t = replacetext(t, char, repl_chars[char])
+		t = replacetext_char(t, char, repl_chars[char])
 	return t
 
 
@@ -289,7 +289,7 @@
 
 //Returns a string with the first element of the string capitalized.
 /proc/capitalize(var/t as text)
-	return uppertext(copytext(t, 1, 2)) + copytext(t, 2)
+	return uppertext(copytext_char(t, 1, 2)) + copytext_char(t, 2)
 
 //This proc strips html properly, remove < > and all text between
 //for complete text sanitizing should be used sanitize()
@@ -368,7 +368,7 @@
 
 //alternative copytext() for encoded text, doesn't break html entities (&#34; and other)
 /proc/copytext_preserve_html(var/text, var/first, var/last)
-	return html_encode(copytext(html_decode(text), first, last))
+	return html_encode(copytext_char(html_decode(text), first, last))
 
 //For generating neat chat tag-images
 //The icon var could be local in the proc, but it's a waste of resources
@@ -384,8 +384,8 @@ var/global/list/text_tag_cache = list()
 	return text_tag_cache[tagname]
 
 /proc/contains_az09(var/input)
-	for(var/i=1, i<=length(input), i++)
-		var/ascii_char = text2ascii(input,i)
+	for(var/i=1, i<=length_char(input), i++)
+		var/ascii_char = text2ascii_char(input,i)
 		switch(ascii_char)
 			// A  .. Z
 			if(65 to 90, 1040 to 1071, 1025)			//Uppercase Letters
