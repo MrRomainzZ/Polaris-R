@@ -54,7 +54,26 @@ var/global/list/department_radio_keys = list(
 	":г" = "Supply",        ".г" = "Supply",
 	":м" = "Service",        ".м" = "Service",
 	":з" = "AI Private",    ".з" = "AI Private",
-	":н" = "Explorer",    ".н" = "Explorer"
+	":н" = "Explorer",    ".н" = "Explorer",
+
+	// Cyrillic characters on the same keys on the Russian QWERTY (phonetic) layout
+	":К" = "right ear",    ".К" = "right ear",
+	":Д" = "left ear",    ".Д" = "left ear",
+	":Ш" = "intercom",    ".Ш" = "intercom",
+	":Р" = "department",    ".Р" = "department",
+	":С" = "Command",        ".С" = "Command",
+	":Т" = "Science",        ".Т" = "Science",
+	":Ь" = "Medical",        ".Ь" = "Medical",
+	":У" = "Engineering", ".У" = "Engineering",
+	":Л" = "Response Team",    ".Л" = "Response Team",
+	":Ы" = "Security",    ".Ы" = "Security",
+	":Ц" = "whisper",        ".Ц" = "whisper",
+	":Е" = "Mercenary",    ".Е" = "Mercenary",
+	":Ч" = "Raider",        ".Ч" = "Raider",
+	":Г" = "Supply",        ".Г" = "Supply",
+	":М" = "Service",        ".М" = "Service",
+	":З" = "AI Private",    ".З" = "AI Private",
+	":Н" = "Explorer",    ".Н" = "Explorer"
 )
 
 
@@ -158,13 +177,13 @@ var/global/list/channel_to_radio_key = new
 	//Parse the radio code and consume it
 	if(message_mode)
 		if(message_mode == "headset")
-			message = copytext(message, 2)	//it would be really nice if the parse procs could do this for us.
+			message = copytext_char(message, 2)	//it would be really nice if the parse procs could do this for us.
 		else if(message_mode == "whisper")
 			whispering = 1
 			message_mode = null
-			message = copytext(message, 3)
+			message = copytext_char(message, 3)
 		else
-			message = copytext(message, 3)
+			message = copytext_char(message, 3)
 
 	//Clean up any remaining space on the left
 	message = trim_left(message)

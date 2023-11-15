@@ -83,24 +83,24 @@
 
 //Filters out undesirable characters from names
 /proc/sanitizeName(var/input, var/max_length = MAX_NAME_LEN, var/allow_numbers = 0)
-	if(!input || length(input) > max_length)
+	if(!input || length_char(input) > max_length)
 		return //Rejects the input if it is null or if it is longer then the max length allowed
 
 	var/number_of_alphanumeric	= 0
 	var/last_char_group			= 0
 	var/output = ""
 
-	for(var/i=1, i<=length(input), i++)
-		var/ascii_char = text2ascii(input,i)
+	for(var/i=1, i<=length_char(input), i++)
+		var/ascii_char = text2ascii_char(input,i)
 		switch(ascii_char)
-			// A  .. Z
-			if(65 to 90)			//Uppercase Letters
+			// A  .. Z, А .. Я, Ё
+			if(65 to 90, 1040 to 1071, 1025)			//Uppercase Letters
 				output += ascii2text(ascii_char)
 				number_of_alphanumeric++
 				last_char_group = 4
 
-			// a  .. z
-			if(97 to 122)			//Lowercase Letters
+			// a  .. z, а .. я, ё
+			if(97 to 122, 1072 to 1103, 1105)			//Lowercase Letters
 				if(last_char_group<2)		output += ascii2text(ascii_char-32)	//Force uppercase first character
 				else						output += ascii2text(ascii_char)
 				number_of_alphanumeric++
