@@ -388,10 +388,10 @@ var/global/list/text_tag_cache = list()
 		var/ascii_char = text2ascii(input,i)
 		switch(ascii_char)
 			// A  .. Z
-			if(65 to 90)			//Uppercase Letters
+			if(65 to 90, 1040 to 1071, 1025)			//Uppercase Letters
 				return 1
 			// a  .. z
-			if(97 to 122)			//Lowercase Letters
+			if(97 to 122, 1072 to 1103, 1105)			//Lowercase Letters
 				return 1
 
 			// 0  .. 9
