@@ -342,7 +342,7 @@
 		client.prefs.lastnews = md5(F["body"])
 		SScharacter_setup.queue_preferences_save(client.prefs)
 
-		var/dat = "<html><meta charset=UTF-8><body><center>"
+		var/dat = "<html><meta charset='UTF-8'><body><center>"
 		dat += "<h1>[F["title"]]</h1>"
 		dat += "<br>"
 		dat += "[F["body"]]"
@@ -478,7 +478,7 @@
 /mob/new_player/proc/LateChoices()
 	var/name = client.prefs.be_random_name ? "friend" : client.prefs.real_name
 
-	var/dat = "<html><meta charset=UTF-8><body><center>"
+	var/dat = "<html><meta charset='UTF-8'><body><center>"
 	dat += "<b>Welcome, [name].<br></b>"
 	dat += "Round Duration: [roundduration2text()]<br>"
 

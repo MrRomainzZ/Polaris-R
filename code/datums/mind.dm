@@ -106,7 +106,7 @@
 	memory += "[new_text]<BR>"
 
 /datum/mind/proc/show_memory(mob/recipient)
-	var/output = "<B>[current.real_name]'s Memory</B><HR>"
+	var/output = "<meta charset=\"UTF-8\"><B>[current.real_name]'s Memory</B><HR>"
 	output += memory
 
 	if(objectives.len>0)
