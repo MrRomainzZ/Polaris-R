@@ -158,7 +158,7 @@
 	p = 1
 	var/intag = 0
 	while(p <= n)
-		var/char = copytext(te, p, p + 1)
+		var/char = copytext_char(te, p, p + 1)
 		if (char == "<") //let's try to not break tags
 			intag = !intag
 		if (intag || char == " " || prob(pr))
@@ -178,17 +178,17 @@
 
 /proc/slur(phrase)
 	phrase = html_decode(phrase)
-	var/leng=length(phrase)
-	var/counter=length(phrase)
+	var/leng=length_char(phrase)
+	var/counter=length_char(phrase)
 	var/newphrase=""
 	var/newletter=""
 	while(counter>=1)
-		newletter=copytext(phrase,(leng-counter)+1,(leng-counter)+2)
+		newletter=copytext_char(phrase,(leng-counter)+1,(leng-counter)+2)
 		if(rand(1,3)==3)
-			if(lowertext(newletter)=="o")	newletter="u"
-			if(lowertext(newletter)=="s")	newletter="ch"
-			if(lowertext(newletter)=="a")	newletter="ah"
-			if(lowertext(newletter)=="c")	newletter="k"
+			if(lowertext(newletter)=="o")	newletter="u"; if(lowertext(newletter)=="о")	newletter="у";	if(lowertext(newletter)=="э")	newletter="и"
+			if(lowertext(newletter)=="s")	newletter="ch";	if(lowertext(newletter)=="с")	newletter="сш";	if(lowertext(newletter)=="г")	newletter="х"
+			if(lowertext(newletter)=="a")	newletter="ah";	if(lowertext(newletter)=="а")	newletter="ах"
+			if(lowertext(newletter)=="c")	newletter="k";	if(lowertext(newletter)=="ц")	newletter="сц"
 		var/randomValue = rand(1, 15)
 		switch (randomValue)
 			if (1 to 4)
@@ -205,12 +205,12 @@
 /proc/stutter(n)
 	var/te = html_decode(n)
 	var/t = ""//placed before the message. Not really sure what it's for.
-	n = length(n)//length of the entire word
+	n = length_char(n)//length of the entire word
 	var/p = null
 	p = 1//1 is the start of any word
 	while(p <= n)//while P, which starts at 1 is less or equal to N which is the length.
-		var/n_letter = copytext(te, p, p + 1)//copies text from a certain distance. In this case, only one letter at a time.
-		if (prob(80) && (ckey(n_letter) in list("b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z")))
+		var/n_letter = copytext_char(te, p, p + 1)//copies text from a certain distance. In this case, only one letter at a time.
+		if (prob(80) && (lowertext(n_letter) in list("b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z","б","в", "г", "д", "ж", "з", "й", "к", "л", "м", "н", "п", "р", "с", "т", "ф", "х", "ц", "ч", "ш", "щ")))
 			if (prob(10))
 				n_letter = text("[n_letter]-[n_letter]-[n_letter]-[n_letter]")//replaces the current letter with this instead.
 			else
@@ -229,9 +229,9 @@
 /proc/Gibberish(t, p)//t is the inputted message, and any value higher than 70 for p will cause letters to be replaced instead of added
 	/* Turn text into complete gibberish! */
 	var/returntext = ""
-	for(var/i = 1, i <= length(t), i++)
+	for(var/i = 1, i <= length_char(t), i++)
 
-		var/letter = copytext(t, i, i+1)
+		var/letter = copytext_char(t, i, i+1)
 		if(prob(50))
 			if(p >= 70)
 				letter = ""
@@ -258,9 +258,9 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 		var/n_letter
 		var/n_mod = rand(1,4)
 		if(p+n_mod>n+1)
-			n_letter = copytext(te, p, n+1)
+			n_letter = copytext_char(te, p, n+1)
 		else
-			n_letter = copytext(te, p, p+n_mod)
+			n_letter = copytext_char(te, p, p+n_mod)
 		if (prob(50))
 			if (prob(30))
 				n_letter = text("[n_letter]-[n_letter]-[n_letter]")
