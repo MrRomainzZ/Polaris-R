@@ -4,6 +4,8 @@
 
 Polaris is a fork of the Baystation12 code branch for the game Spacestation13.
 
+А этот форк изо всех сил пытается добавить поддержку русского языка в игру дабы тыкаться в него со своими друзьями. Или может быть показать миру, кто знает.
+
 ---
 
 ### LICENSE
