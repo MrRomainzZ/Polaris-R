@@ -99,6 +99,7 @@
 
 	var/html = {"
 <html>
+<meta charset=\"UTF-8\">
 	<head>
 		<title>[title]</title>
 		<style>
