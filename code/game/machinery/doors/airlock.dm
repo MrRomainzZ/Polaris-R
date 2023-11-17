@@ -1289,7 +1289,7 @@ About the new airlock wires panel:
 					if(!has_beeped)
 						playsound(src, 'sound/machines/buzz-two.ogg', 50, 0)
 						has_beeped = 1
-					close_door_at = world.time + 6
+					addtimer(CALLBACK(src, .proc/close), (normalspeed ? 50 : 5))
 					return
 
 	for(var/turf/turf in locs)

@@ -28,7 +28,7 @@ INITIALIZE_IMMEDIATE(/mob/zshadow)
 	owner.shadow = null
 	owner = null
 	..() //But we don't return because the hint is wrong
-	return QDEL_HINT_QUEUE
+	return QDEL_HINT_HARDDEL
 
 /mob/Destroy()
 	QDEL_NULL(shadow)
