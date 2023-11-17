@@ -17,6 +17,7 @@ CATEGORY: Fiction
 	author = "Molly Highlander"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					p.font1 {font-family: MS Serif; font-size: 18px; color: #DFD35C;}
@@ -47,6 +48,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Palatino Linotype; color: #311E12; background-color: #F7F5EA; text-align: center;}
@@ -62,6 +64,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Palatino Linotype; color: #311E12; background-color: #F7F5EA; text-align: center;}
@@ -76,6 +79,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family:Palatino Linotype; color: #311E12; font-size: 14px; background-color: #F7F5EA; margin: 15px;}
@@ -96,6 +100,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family:Palatino Linotype; color: #311E12; font-size: 14px; background-color: #F7F5EA; margin: 15px;}
@@ -130,6 +135,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family:Palatino Linotype; color: #311E12; font-size: 14px; background-color: #F7F5EA; margin: 15px;}
@@ -157,6 +163,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family:Palatino Linotype; color: #311E12; font-size: 14px; background-color: #F7F5EA; margin: 15px;}
@@ -184,6 +191,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family:Palatino Linotype; color: #311E12; font-size: 14px; background-color: #F7F5EA; margin: 15px;}

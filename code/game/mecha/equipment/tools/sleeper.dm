@@ -112,6 +112,7 @@
 	if(!occupant)
 		return
 	return {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<title>[occupant] statistics</title>
 				<script language='javascript' type='text/javascript'>

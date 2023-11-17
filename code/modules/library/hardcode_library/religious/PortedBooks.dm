@@ -18,6 +18,7 @@ Category: Religion
 	author = "Satrap"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Courier New; color: #57401E; border-style: double; border-radius: 5px; border-color: #193A54; background-color: #CAA978;}
@@ -35,6 +36,7 @@ Category: Religion
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7;}
@@ -57,6 +59,7 @@ Category: Religion
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7;}
@@ -95,6 +98,7 @@ Category: Religion
 	author = "Shra'ziir Krin Enai-Rinrijar"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-family: Impact; font-size: 20px; color: #2E2726; text-align: center;}
@@ -183,6 +187,7 @@ Category: Religion
 	author = "Earth Religion Preservation"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; font-family: Palatino Linotype; text-align: center;}
@@ -220,6 +225,7 @@ Category: Religion
 	author = "Earth Religion Preservation"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; font-family: Palatino Linotype; text-align: center;}
@@ -261,6 +267,7 @@ Category: Religion
 	author = "Earth Religion Preservation"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; font-family: Palatino Linotype; text-align: center;}

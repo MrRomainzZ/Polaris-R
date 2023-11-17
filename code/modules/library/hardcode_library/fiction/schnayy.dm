@@ -17,6 +17,7 @@ CATEGORY: Fiction
 	author = "Philip K. Dick"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-size: 16px; font-family: Impact; color: white; margin: 15px 0px 5px;}
@@ -32,6 +33,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; color: black; font-family: Verdana; background-color: #FFFFFF;}
@@ -129,6 +131,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; color: black; font-family: Verdana; background-color: #FFFFFF;}
@@ -239,6 +242,7 @@ CATEGORY: Fiction
 	author = "A.B. Paterson"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-size: 16px; font-family: Lucida Console; color: #623A13; margin: 15px 0px 5px; border-color: #623A13; border-style: double; border-radius: 5px;}
@@ -254,6 +258,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 15px; font-family: Times New Roman; color: #623A13; background-color: #F5F0EB;}

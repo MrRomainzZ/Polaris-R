@@ -81,7 +81,7 @@
 	user << browse_rsc('html/browser/codex.css', "codex.css")
 
 	var/dat
-	dat =  "<head>"
+	dat =  "<meta charset='utf-8'><head>"
 	dat += "<title>[holder.name] ([current_page.name])</title>"
 	dat += "<link rel='stylesheet' href='codex.css' />"
 	dat += "</head>"

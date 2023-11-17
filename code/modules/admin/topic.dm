@@ -380,7 +380,7 @@
 			return
 
 		var/dat = ""
-		var/header = "<head><title>Job-Ban Panel: [M.name]</title></head>"
+		var/header = "<meta charset='utf-8'><head><title>Job-Ban Panel: [M.name]</title></head>"
 		var/body
 		var/jobs = ""
 
@@ -1461,7 +1461,7 @@
 
 			for (var/page = 1, page <= B.pages.len, page++)
 				var/obj/pageobj = B.pages[page]
-				data += "<meta charset=\"UTF-8\"><A href='?src=\ref[src];AdminFaxViewPage=[page];paper_bundle=\ref[B]'>Page [page] - [pageobj.name]</A><BR>"
+				data += "<meta charset='utf-8'><A href='?src=\ref[src];AdminFaxViewPage=[page];paper_bundle=\ref[B]'>Page [page] - [pageobj.name]</A><BR>"
 
 			usr << browse(data, "window=[B.name]")
 		else

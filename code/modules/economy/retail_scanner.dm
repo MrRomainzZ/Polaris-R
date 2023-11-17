@@ -325,6 +325,7 @@
 
 /obj/item/retail_scanner/proc/get_current_transaction()
 	var/dat = {"
+	<meta charset='utf-8'>
 	<head><style>
 		.tx-title-r {text-align: center; background-color:#ffdddd; font-weight: bold}
 		.tx-name-r {background-color: #eebbbb}
@@ -345,6 +346,7 @@
 
 /obj/item/retail_scanner/proc/add_transaction_log(var/c_name, var/p_method, var/t_amount)
 	var/dat = {"
+	<meta charset='utf-8'>
 	<head><style>
 		.tx-title {text-align: center; background-color:#ddddff; font-weight: bold}
 		.tx-name {background-color: #bbbbee}

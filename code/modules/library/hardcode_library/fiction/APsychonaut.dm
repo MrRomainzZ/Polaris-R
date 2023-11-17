@@ -18,6 +18,7 @@ CATEGORY: Fiction
 	author = "Karla"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Palatino Linotype; font-size: 20px; color: #3F3A55;}
@@ -39,6 +40,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Times New Roman; color: #55413A; font-size: 16px; background-color: #EBE1D9;}
@@ -61,6 +63,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Times New Roman; color: #55413A; font-size: 16px; background-color: #EBE1D9;}
@@ -80,6 +83,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Times New Roman; color: #55413A; font-size: 16px; background-color: #EBE1D9;}
@@ -105,6 +109,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Times New Roman; color: #55413A; font-size: 16px; background-color: #EBE1D9;}
@@ -119,6 +124,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Times New Roman; color: #55413A; font-size: 16px; background-color: #EBE1D9;}
@@ -133,6 +139,7 @@ CATEGORY: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Times New Roman; color: #55413A; font-size: 16px; background-color: #EBE1D9;}

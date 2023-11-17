@@ -159,7 +159,7 @@
 	set name = "Show Text Messages"
 	set desc = "Allows you to see exonet text messages you've sent and received."
 
-	var/HTML = "<html><head><title>Exonet Message Log</title></head><body>"
+	var/HTML = "<html><meta charset='utf-8'><head><title>Exonet Message Log</title></head><body>"
 	for(var/line in exonet_messages)
 		HTML += line + "<br>"
 	HTML +="</body></html>"

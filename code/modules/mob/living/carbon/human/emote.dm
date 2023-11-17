@@ -113,7 +113,7 @@ var/global/list/_human_default_emotes = list(
 	set desc = "Sets an extended description of your character's features."
 	set category = "IC"
 
-	var/HTML = "<meta charset='UTF-8'><body>"
+	var/HTML = "<meta charset='utf-8><body>"
 	HTML += "<tt><center>"
 	HTML += "<b>Update Flavour Text</b> <hr />"
 	HTML += "<br></center>"

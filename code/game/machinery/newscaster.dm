@@ -269,7 +269,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 	if(istype(user, /mob/living/carbon/human) || istype(user,/mob/living/silicon))
 		var/mob/living/human_or_robot_user = user
 		var/dat
-		dat = text("<meta charset=\"UTF-8\"><HEAD><TITLE>Newscaster</TITLE></HEAD><H3>Newscaster Unit #[unit_no]</H3>")
+		dat = text("<meta charset='utf-8'><HEAD><TITLE>Newscaster</TITLE></HEAD><H3>Newscaster Unit #[unit_no]</H3>")
 
 		scan_user(human_or_robot_user) //Newscaster scans you
 

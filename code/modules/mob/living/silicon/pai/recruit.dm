@@ -167,7 +167,7 @@ var/global/datum/paiController/paiController			// Global handler for pAI candida
 			"}
 
 	dat += {"
-	<meta charset=\"UTF-8\"><body>
+	<meta charset='utf-8'><body>
 		<b><font size="3px">pAI Personality Configuration</font></b>
 		<p class="top">Please configure your pAI personality's options. Remember, what you enter here could determine whether or not the user requesting a personality chooses you!</p>
 
@@ -243,6 +243,7 @@ var/global/datum/paiController/paiController			// Global handler for pAI candida
 	dat += {"
 		<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">
 		<html>
+			<meta charset='utf-8'>
 			<head>
 				<style>
 					body {

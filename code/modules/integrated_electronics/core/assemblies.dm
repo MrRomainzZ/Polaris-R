@@ -71,7 +71,7 @@
 		total_complexity = total_complexity + part.complexity
 	var/HTML = list()
 
-	HTML += "<html><head><title>[src.name]</title></head><body>"
+	HTML += "<html><meta charset='utf-8'><head><title>[src.name]</title></head><body>"
 	HTML += "<br><a href='?src=\ref[src]'>\[Refresh\]</a>  |  "
 	HTML += "<a href='?src=\ref[src];rename=1'>\[Rename\]</a><br>"
 	HTML += "[total_parts]/[max_components] ([round((total_parts / max_components) * 100, 0.1)]%) space taken up in the assembly.<br>"

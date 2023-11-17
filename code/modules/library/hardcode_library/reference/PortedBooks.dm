@@ -18,6 +18,7 @@ Category: Reference
 	author = "Astrid Morton"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {color: #FFFFFF; border-style: double solid; border-color: #FFFFFF;}
@@ -35,6 +36,7 @@ Category: Reference
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Lucida Sans Unicode; font-size: 17px; color: #43494F; border-style: solid; border-color: #43494F; padding: 10px;}
@@ -67,6 +69,7 @@ Category: Reference
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Lucida Sans Unicode; font-size: 15px; color: #43494F;}
@@ -115,6 +118,7 @@ Category: Reference
 	author = "Yuki Matsuda"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Courier New; font-size: 17px; color: #0C1B2C; text-align: center; margin: 10px 5px;}
@@ -133,7 +137,7 @@ Category: Reference
 					</html>
 					"},
 				{"<html>
-					<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Lucida Sans Unicode; font-size: 15px; color: #43494F; text-align: center;}
@@ -167,6 +171,7 @@ Category: Reference
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Lucida Sans Unicode; font-size: 15px; color: #43494F; text-align: center;}
@@ -205,6 +210,7 @@ Category: Reference
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Lucida Sans Unicode; font-size: 15px; color: #43494F; text-align: center;}
@@ -245,6 +251,7 @@ Category: Reference
 	author = "Ray Rogers"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-style: Impact; font-size: 20px; text-align: center; color: #A7371C}
@@ -281,6 +288,7 @@ Category: Reference
 	author = "Lachina Green"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-family: Lucida Sans Unicode; font-size: 17px; color: #43494F; border-style: solid; border-color: #43494F; padding: 10px; text-align: center;}
@@ -334,6 +342,7 @@ Category: Reference
 	author = "NanoTrasen"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-family: Lucida Sans Unicode; font-size: 17px; color: #43494F; border-style: solid; border-color: #43494F; padding: 10px; text-align: center;}

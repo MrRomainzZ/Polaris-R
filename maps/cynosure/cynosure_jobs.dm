@@ -384,6 +384,7 @@ Using <font color='#e0a000'>grab intent</font> you can pick up and drop items by
 /obj/item/book/manual/drake_handling/Initialize()
 	. = ..()
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}

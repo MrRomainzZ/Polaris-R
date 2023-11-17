@@ -18,6 +18,7 @@ Category: Non-Fiction
 	author = "Sene of Sheraeshi"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-family: Impact; font-size: 20px; color: #2E2726;}
@@ -53,6 +54,7 @@ Category: Non-Fiction
 	author = "Yang Simiao"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Courier New; font-size: 16px; color: #91BDB7; background-color: #111514; border-style: double solid; padding: 10px; text-align: center;}
@@ -66,6 +68,7 @@ Category: Non-Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7;}
@@ -82,6 +85,7 @@ Category: Non-Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7;}
@@ -110,6 +114,7 @@ Category: Non-Fiction
 	author = "Satrap"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Courier New; color: #57401E; border-style: double; border-radius: 5px; border-color: #193A54; background-color: #CAA978;}
@@ -127,6 +132,7 @@ Category: Non-Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7;}
@@ -141,6 +147,7 @@ Category: Non-Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7;}
@@ -157,6 +164,7 @@ Category: Non-Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7;}
@@ -175,6 +183,7 @@ Category: Non-Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7;}
@@ -191,6 +200,7 @@ Category: Non-Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7;}
@@ -206,6 +216,7 @@ Category: Non-Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7;}
@@ -236,6 +247,7 @@ Category: Non-Fiction
 	author = "Jyotirao Phule"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: MS Serif; color: #1E2527;}
@@ -254,6 +266,7 @@ Category: Non-Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #1E2527; background-color: #F5F5F1;}
@@ -269,6 +282,7 @@ Category: Non-Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #1E2527; background-color: #F5F5F1;}

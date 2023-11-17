@@ -68,7 +68,7 @@
 		return
 	if(active.fields["arrestsearch"] == "arrest")
 		var/output = {"
-		<HTML><HEAD><TITLE>[active.fields["namewarrant"]]</TITLE></HEAD>
+		<HTML><meta charset='utf-8'><HEAD><TITLE>[active.fields["namewarrant"]]</TITLE></HEAD>
 		<BODY bgcolor='#FFFFFF'><center><large><b>Sol Central Government Colonial Marshal Bureau</b></large></br>
 		in the jurisdiction of the</br>
 		[using_map.boss_name] in [using_map.station_name]</br>
@@ -86,7 +86,7 @@
 		show_browser(user, output, "window=Warrant for the arrest of [active.fields["namewarrant"]]")
 	if(active.fields["arrestsearch"] ==  "search")
 		var/output= {"
-		<HTML><HEAD><TITLE>Search Warrant: [active.fields["namewarrant"]]</TITLE></HEAD>
+		<HTML><meta charset='utf-8'><HEAD><TITLE>Search Warrant: [active.fields["namewarrant"]]</TITLE></HEAD>
 		<BODY bgcolor='#FFFFFF'><center>in the jurisdiction of the</br>
 		[using_map.boss_name] in [using_map.station_name]</br>
 		</br>

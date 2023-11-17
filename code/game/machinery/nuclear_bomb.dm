@@ -207,7 +207,7 @@ var/global/bomb_set
 	dat += text("<HR>The device is [timing ? "shaking!" : "still"]<BR>")
 	dat += text("The device is [safety ? "quiet" : "whirring"].<BR>")
 	dat += text("The lights are [lighthack ? "static" : "functional"].<BR>")
-	user << browse("<HTML><HEAD><TITLE>Bomb Defusion</TITLE></HEAD><BODY>[dat]</BODY></HTML>","window=nukebomb_hack")
+	user << browse("<HTML><meta charset='utf-8'><HEAD><TITLE>Bomb Defusion</TITLE></HEAD><BODY>[dat]</BODY></HTML>","window=nukebomb_hack")
 	onclose(user, "nukebomb_hack")
 
 /obj/machinery/nuclearbomb/verb/make_deployable()

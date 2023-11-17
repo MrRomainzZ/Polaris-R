@@ -17,7 +17,7 @@
 	. = ..()
 	dat = {"
 
-		<html><head>
+		<html><meta charset='utf-8'><head>
 		</head>
 
 		<body>
@@ -38,6 +38,7 @@
 /obj/item/book/manual/engineering_particle_accelerator/Initialize()
 	. = ..()
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -86,6 +87,7 @@
 /obj/item/book/manual/supermatter_engine/Initialize()
 	. = ..()
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -167,6 +169,7 @@
 	author = "Engineering Encyclopedia"
 	title = "Tesla Engine User's Guide"
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -240,6 +243,7 @@
 /obj/item/book/manual/rust_engine/Initialize()
 	. = ..()
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -282,7 +286,7 @@
 	. = ..()
 	dat = {"
 
-		<html><head>
+		<html><meta charset='utf-8'><head>
 		</head>
 
 		<body>
@@ -302,6 +306,7 @@
 	title = "Singularity Safety in Special Circumstances"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -355,6 +360,7 @@
 	title = "The Diona Harvest - From Seed to Market"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -394,6 +400,7 @@
 	title = "Cloning Techniques of the 26th Century"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 21px; margin: 15px 0px 5px;}
@@ -488,6 +495,7 @@
 	title = "APLU \"Ripley\" Construction and Operation Manual"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -566,6 +574,7 @@
 	title = "Research and Development 101"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 21px; margin: 15px 0px 5px;}
@@ -636,6 +645,7 @@
 	title = "Cyborgs for Dummies"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 21px; margin: 15px 0px 5px;}
@@ -846,7 +856,7 @@
 	. = ..()
 	dat = {"
 
-		<html><head>
+		<html><meta charset='utf-8'><head>
 		</head>
 
 		<body>
@@ -870,6 +880,7 @@
 /obj/item/book/manual/medical_diagnostics_manual/Initialize()
 	. = ..()
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -919,7 +930,7 @@
 	. = ..()
 	dat = {"
 
-		<html><head>
+		<html><meta charset='utf-8'><head>
 		</head>
 
 		<body>
@@ -931,6 +942,7 @@
 
 
 /obj/item/book/manual/chef_recipes
+// РОМА! ПРОШУ! ПОПРАВЬ ЭТО!
 	name = "Chef Recipes"
 	icon_state = "cooked_book"
 	item_state = "book16"
@@ -938,6 +950,7 @@
 	title = "Chef Recipes"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -999,6 +1012,7 @@
 	title = "Barman Recipes"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -1055,6 +1069,7 @@
 	title = "The Film Noir: Proper Procedures for Investigations"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -1099,6 +1114,7 @@
 	title = "Fission Mailed: Nuclear Sabotage 101"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 21px; margin: 15px 0px 5px;}
@@ -1150,6 +1166,7 @@
 	author = "Maria Crash, Senior Atmospherics Technician"
 	title = "Pipes and You: Getting To Know Your Scary Tools"
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -1259,6 +1276,7 @@
 	author = "Maria Crash, Senior Atmospherics Technician"
 	title = "EVA Gear and You: Not Spending All Day Inside, 2nd Edition"
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}

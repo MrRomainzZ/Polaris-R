@@ -19,6 +19,7 @@ Category: Fiction
 	author = "Miyahara Koichiro"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Palatino Linotype; color: #E3BE64; border-style: double; border-radius: 10px;}
@@ -37,6 +38,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7;}
@@ -96,6 +98,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7;}
@@ -190,6 +193,7 @@ Category: Fiction
 	author = "Unknown"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-size: 16px; font-family: Trebuchet MS; color: #998666;}
@@ -224,6 +228,7 @@ Category: Fiction
 	author = "Sir Philip Sidney"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				body {font-size: 15px; font-family: Times New Roman; color: #623A13; background-color: #F5F0EB; text-align: center;}
@@ -268,6 +273,7 @@ Category: Fiction
 	author = "W.B. Yeats"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				body {font-size: 15px; font-family: MS Serif; color: #421A14; background-color: #F5F2EC; text-align: center;}
@@ -314,6 +320,7 @@ Category: Fiction
 	author = "Wilfred Owen"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-style: Palatino Linotype; font-size: 16px; color: #D9CC8D;}
@@ -331,6 +338,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7; text-align: center;}
@@ -361,6 +369,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7; text-align: center;}
@@ -396,6 +405,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #2E2726; background-color: #EFECE7; text-align: center;}
@@ -452,7 +462,7 @@ Category: Fiction
 	author = "Samara McCollough"
 
 	pages = list({"<html>
-					<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {background-color: #111514; color: #9CC1C1; font-size: 20px; border-style: double solid; padding: 10px;}
@@ -468,6 +478,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Courier New; color: #2E2B23; font-size: 15px;}
@@ -502,6 +513,7 @@ Category: Fiction
 	author = "Roman Pilduski"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				body {font-size: 15px; font-family: Times New Roman; color: #623A13; background-color: #F5F0EB; text-align: center;}
@@ -543,6 +555,7 @@ Category: Fiction
 	author = "Ogawa Mimei"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Palatino Linotype; color: #151617;}
@@ -561,6 +574,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #1E2527; background-color: #F5F5F1;}
@@ -582,6 +596,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #1E2527; background-color: #F5F5F1;}
@@ -604,6 +619,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #1E2527; background-color: #F5F5F1;}
@@ -625,6 +641,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-size: 13px; font-family: Trebuchet MS; color: #1E2527; background-color: #F5F5F1;}
@@ -657,6 +674,7 @@ Category: Fiction
 	author = "Jawn Mancer"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-size: 18px; font-family: Tahoma; color: #5C291D; margin: 15px 0px 5px;}
@@ -675,6 +693,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Palatino Linotype; font-size: 14px; color: #2E2726; background-color: #EFECE7; text-align: center;}
@@ -775,6 +794,7 @@ Category: Fiction
 	author = "Jawn Mancer"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Palatino Linotype; color: #D1DBD9; border-style: double; border-width: 10px; border-color: #7B7E84; background-color: #000000; padding: 10px;}
@@ -793,6 +813,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Palatino Linotype; font-size: 14px; color: #2E2726; background-color: #EFECE7;}
@@ -816,6 +837,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Palatino Linotype; font-size: 14px; color: #2E2726; background-color: #EFECE7;}
@@ -839,6 +861,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Palatino Linotype; font-size: 14px; color: #2E2726; background-color: #EFECE7;}
@@ -872,6 +895,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Palatino Linotype; font-size: 14px; color: #2E2726; background-color: #EFECE7;}
@@ -909,6 +933,7 @@ Category: Fiction
 	author = "Jawn Mancer"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Palatino Linotype; color: #D1DBD9; border-style: double; border-width: 10px; border-color: #7B7E84; background-color: #000000; padding: 10px;}
@@ -927,6 +952,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-size: 17px; text-align: center;}
@@ -952,6 +978,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Palatino Linotype; font-size: 14px; color: #2E2726; background-color: #EFECE7;}
@@ -996,6 +1023,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Palatino Linotype; font-size: 14px; color: #2E2726; background-color: #EFECE7;}
@@ -1024,6 +1052,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Palatino Linotype; font-size: 14px; color: #2E2726; background-color: #EFECE7;}
@@ -1081,6 +1110,7 @@ Category: Fiction
 	author = "Han Shan"
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-size: 25px; font-family: Trebuchet MS; color: #28392D; margin: 15px 0px 5px;}
@@ -1099,6 +1129,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Georgia; font-size: 14px; color: #6A4716; background-color: #F9F8F1; text-align: center;}
@@ -1124,6 +1155,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Georgia; font-size: 14px; color: #6A4716; background-color: #F9F8F1; text-align: center;}
@@ -1149,6 +1181,7 @@ Category: Fiction
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Georgia; font-size: 14px; color: #6A4716; background-color: #F9F8F1; text-align: center;}
@@ -1189,6 +1222,7 @@ Category: Fiction
 	author = "Haggis MacDougall"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-family: Courier New; font-size: 18px; text-align: center; color: #513927; line-height: 16px;}
@@ -1228,6 +1262,7 @@ Category: Fiction
 	author = "Henry Clement Fandango"
 
 	dat = {"<html>
+				<meta charset='utf-8'>
 				<head>
 				<style>
 				h1 {font-family: Courier New; font-size: 18px; color: #EEEEEE; line-height: 16px;}

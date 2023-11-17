@@ -98,7 +98,7 @@ a creative player the means to solve many problems.  Circuits are held inside an
 	var/table_middle_width = "40%"
 
 	var/HTML = list()
-	HTML += "<html><head><title>[src.displayed_name]</title></head><body>"
+	HTML += "<html><meta charset='utf-8'><head><title>[src.displayed_name]</title></head><body>"
 	HTML += "<div align='center'>"
 	HTML += "<table border='1' style='undefined;table-layout: fixed; width: 80%'>"
 

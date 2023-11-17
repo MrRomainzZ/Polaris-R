@@ -15,6 +15,7 @@ CATEGORY: Reference
 	author = "I.R.I.S."
 
 	pages = list({"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Courier New; font-size: 16px; color: #B55EB5; background-color: #201E20; border-style: double solid; padding: 10px;}
@@ -33,6 +34,7 @@ CATEGORY: Reference
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					h1 {font-family: Courier New; color: #2E2B23; font-size: 15px;}
@@ -58,6 +60,7 @@ CATEGORY: Reference
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Trebuchet MS; color: #2E2B23; font-size: 12px; background-color: #EFEDE6;}
@@ -89,6 +92,7 @@ CATEGORY: Reference
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Trebuchet MS; color: #2E2B23; font-size: 12px; background-color: #EFEDE6;}
@@ -116,6 +120,7 @@ CATEGORY: Reference
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Trebuchet MS; color: #2E2B23; font-size: 12px; background-color: #EFEDE6;}
@@ -141,6 +146,7 @@ CATEGORY: Reference
 					</html>
 					"},
 				{"<html>
+					<meta charset='utf-8'>
 					<head>
 					<style>
 					body {font-family: Trebuchet MS; color: #2E2B23; font-size: 12px; background-color: #EFEDE6;}
