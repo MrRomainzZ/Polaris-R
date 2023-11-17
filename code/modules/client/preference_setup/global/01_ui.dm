@@ -88,21 +88,21 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["select_client_fps"])
-		var/fps_new = input(user, "Input Client FPS (1-200, 0 uses server FPS)", "Global Preference", pref.client_fps) as null|num
+		var/fps_new = input(user, "Input Client FPS (1-60, 0 uses server FPS (currently:[world.fps]))", "Global Preference", pref.client_fps) as null|num
 		if(isnull(fps_new) || !CanUseTopic(user)) return TOPIC_NOACTION
 		if(fps_new < 0 || fps_new > MAX_CLIENT_FPS) return TOPIC_NOACTION
 		pref.client_fps = fps_new
 		if(pref.client)
 			pref.client.fps = fps_new
 		return TOPIC_REFRESH
-		
+
 	else if(href_list["select_ambience_freq"])
 		var/ambience_new = input(user, "Input how often you wish to hear ambience repeated! (1-60 MINUTES, 0 for disabled)", "Global Preference", pref.ambience_freq) as null|num
 		if(isnull(ambience_new) || !CanUseTopic(user)) return TOPIC_NOACTION
 		if(ambience_new < 0 || ambience_new > 60) return TOPIC_NOACTION
 		pref.ambience_freq = ambience_new
 		return TOPIC_REFRESH
-		
+
 	else if(href_list["select_ambience_chance"])
 		var/ambience_chance_new = input(user, "Input the chance you'd like to hear ambience played to you (On area change, or by random ambience). 35 means a 35% chance to play ambience. This is a range from 0-100. 0 disables ambience playing entirely. This is also affected by Ambience Frequency.", "Global Preference", pref.ambience_freq) as null|num
 		if(isnull(ambience_chance_new) || !CanUseTopic(user)) return TOPIC_NOACTION
@@ -113,7 +113,7 @@
 	else if(href_list["tgui_fancy"])
 		pref.tgui_fancy = !pref.tgui_fancy
 		return TOPIC_REFRESH
-		
+
 	else if(href_list["tgui_lock"])
 		pref.tgui_lock = !pref.tgui_lock
 		return TOPIC_REFRESH

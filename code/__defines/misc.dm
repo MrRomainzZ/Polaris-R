@@ -24,7 +24,7 @@
 #define EFFECTIVE_INVIS					  50		// Below this, can't be examined, may as well be invisible to the game
 
 // For the client FPS pref and anywhere else
-#define MAX_CLIENT_FPS	200
+#define MAX_CLIENT_FPS	60
 
 // Some arbitrary defines to be used by self-pruning global lists. (see master_controller)
 #define PROCESS_KILL 26 // Used to trigger removal from a processing list.
