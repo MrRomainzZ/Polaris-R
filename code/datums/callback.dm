@@ -98,10 +98,18 @@
 		if(W)
 			var/mob/M = W.resolve()
 			if(M)
+				if (length(args))
+					return world.PushUsr(arglist(list(M, src) + args))
 				return world.PushUsr(M, src)
 
 	if (!object)
 		return
+
+#if DM_VERSION <= 514
+	if(istext(object) && object != GLOBAL_PROC)
+		to_chat(usr, "[object] may be an external library. Calling external libraries is disallowed.", confidential = TRUE)
+		return
+#endif
 
 	var/list/calling_arguments = arguments
 	if (length(args))
@@ -109,6 +117,10 @@
 			calling_arguments = calling_arguments + args //not += so that it creates a new list so the arguments list stays clean
 		else
 			calling_arguments = args
+	if(datum_flags & DF_VAR_EDITED)
+		if(usr != GLOB.AdminProcCaller && !usr?.client?.ckey) //This happens when a timer or the MC invokes a callback
+			return HandleUserlessProcCall(usr, object, delegate, calling_arguments)
+		return WrapAdminProcCall(object, delegate, calling_arguments)
 	if (object == GLOBAL_PROC)
 		return call(delegate)(arglist(calling_arguments))
 	return call(object, delegate)(arglist(calling_arguments))

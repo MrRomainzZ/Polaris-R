@@ -208,3 +208,48 @@ GLOBAL_PROTECT(AdminProcCallSpamPrevention)
 
 	else
 		. = "<font color='blue'>[procname] returned: [!isnull(returnval) ? returnval : "null"]</font>"
+
+
+/// For callback.dm fix
+/// Used to handle proccalls called indirectly by an admin (e.g. tgs, circuits).
+/// Has to be a mob because IsAdminAdvancedProcCall() checks usr, which is a mob variable.
+/// So usr is set to this for any proccalls that don't have any usr mob/client to refer to.
+/mob/proccall_handler
+	name = "ProcCall Handler"
+	desc = "If you are seeing this, tell a coder."
+
+	var/list/callers = list()
+
+	invisibility = INVISIBILITY_ABSTRACT
+	density = FALSE
+
+
+/**
+ * Handles a userless proccall, stolen from TG. For callback.dm
+ *
+ * Arguments:
+ * * user - a string used to identify the user
+ * * target - the target to proccall on
+ * * proc - the proc to call
+ * * arguments - any arguments
+ */
+
+/mob/proccall_handler/proc/add_caller(caller_name)
+	callers += caller_name
+	name = "[initial(name)] ([callers.Join(") (")])"
+
+/// Removes a caller.
+/mob/proccall_handler/proc/remove_caller(caller_name)
+	callers -= caller_name
+	name = "[initial(name)] ([callers.Join(") (")])"
+
+/proc/HandleUserlessProcCall(user, datum/target, procname, list/arguments)
+	if(IsAdminAdvancedProcCall())
+		return
+	var/mob/proccall_handler/handler = GLOB.AdminProcCaller
+	handler.add_caller(user)
+	var/lastusr = usr
+	usr = handler
+	. = WrapAdminProcCall(target, procname, arguments)
+	usr = lastusr
+	handler.remove_caller(user)
