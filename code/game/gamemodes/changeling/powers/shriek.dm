@@ -6,7 +6,7 @@
 	ability_icon_state = "ling_resonant_shriek"
 	genomecost = 2
 	power_category = CHANGELING_POWER_SHRIEKS
-	verbpath = /mob/proc/changeling_resonant_shriek
+	verbpath = TYPE_PROC_REF(/mob, changeling_resonant_shriek)
 
 /datum/power/changeling/dissonant_shriek
 	name = "Dissonant Shriek"
@@ -16,7 +16,7 @@
 	ability_icon_state = "ling_dissonant_shriek"
 	genomecost = 2
 	power_category = CHANGELING_POWER_SHRIEKS
-	verbpath = /mob/proc/changeling_dissonant_shriek
+	verbpath = TYPE_PROC_REF(/mob, changeling_dissonant_shriek)
 
 //A flashy ability, good for crowd control and sewing chaos.
 /mob/proc/changeling_resonant_shriek()

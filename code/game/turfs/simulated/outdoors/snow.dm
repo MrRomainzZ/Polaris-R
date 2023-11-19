@@ -18,7 +18,7 @@
 	..()
 	if(istype(M))
 		M.SetStunned(1)
-		addtimer(CALLBACK(src, .proc/slip_mob, M), 1 * world.tick_lag)
+		addtimer(CALLBACK(src, PROC_REF(slip_mob), M), 1 * world.tick_lag)
 
 /turf/simulated/floor/outdoors/ice/proc/slip_mob(var/mob/living/M)
 	if(istype(M, /mob/living) && M.loc == src)

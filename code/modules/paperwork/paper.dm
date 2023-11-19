@@ -120,7 +120,7 @@
 	pixel_y = rand(-8, 8)
 	pixel_x = rand(-9, 9)
 	stamps = ""
-	addtimer(CALLBACK(src, .proc/update_info, FALSE), 0)
+	addtimer(CALLBACK(src, PROC_REF(update_info), FALSE), 0)
 
 /obj/item/paper/proc/update_info(var/sanitize = TRUE)
 	if(name != "paper")

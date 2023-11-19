@@ -232,7 +232,7 @@
 			container.reagents.remove_reagent(biomass_id, product_entry[2])
 			playsound(src, "switch", 30)
 			visible_message(SPAN_NOTICE("\The [src] fills with fluid and begins to print \a [initial(product_path.name)]."))
-			print_timer = addtimer(CALLBACK(src, .proc/print_organ, product_entry[1]), print_delay, TIMER_STOPPABLE)
+			print_timer = addtimer(CALLBACK(src, PROC_REF(print_organ), product_entry[1]), print_delay, TIMER_STOPPABLE)
 			set_active(TRUE)
 	if (href_list["cancelPrint"])
 		if (print_timer)

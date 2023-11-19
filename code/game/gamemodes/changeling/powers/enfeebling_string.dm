@@ -6,7 +6,7 @@
 	ability_icon_state = "ling_sting_enfeeble"
 	genomecost = 1
 	power_category = CHANGELING_POWER_STINGS
-	verbpath = /mob/proc/changeling_enfeebling_string
+	verbpath = TYPE_PROC_REF(/mob, changeling_enfeebling_string)
 
 /datum/modifier/enfeeble
 	name = "enfeebled"
@@ -30,7 +30,7 @@
 	set name = "Enfeebling Sting (30)"
 	set desc = "Reduces the maximum health of a victim for a few minutes.."
 
-	var/mob/living/carbon/T = changeling_sting(30,/mob/proc/changeling_enfeebling_string)
+	var/mob/living/carbon/T = changeling_sting(30,TYPE_PROC_REF(/mob, changeling_enfeebling_string))
 	if(!T)
 		return 0
 	if(ishuman(T))

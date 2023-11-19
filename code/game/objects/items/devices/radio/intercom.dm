@@ -15,12 +15,12 @@
 	. = ..()
 	var/area/A = get_area(src)
 	if(A)
-		GLOB.apc_event.register(A, src, /atom/proc/update_icon)
+		GLOB.apc_event.register(A, src, TYPE_PROC_REF(/atom, update_icon))
 
 /obj/item/radio/intercom/Destroy()
 	var/area/A = get_area(src)
 	if(A)
-		GLOB.apc_event.unregister(A, src, /atom/proc/update_icon)
+		GLOB.apc_event.unregister(A, src, TYPE_PROC_REF(/atom, update_icon))
 	return ..()
 
 /obj/item/radio/intercom/custom

@@ -5,7 +5,7 @@
 	ability_icon_state = "ling_mimic_voice"
 	genomecost = 1
 	power_category = CHANGELING_POWER_ENHANCEMENTS
-	verbpath = /mob/proc/changeling_mimicvoice
+	verbpath = TYPE_PROC_REF(/mob, changeling_mimicvoice)
 
 // Fake Voice
 

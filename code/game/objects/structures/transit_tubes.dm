@@ -83,7 +83,7 @@
 	air_contents.adjust_multi("oxygen", MOLES_O2STANDARD * 2, "nitrogen", MOLES_N2STANDARD)
 	air_contents.temperature = T20C
 	// Give auto tubes time to align before trying to start moving
-	addtimer(CALLBACK(src, .proc/follow_tube), 5)
+	addtimer(CALLBACK(src, PROC_REF(follow_tube)), 5)
 
 /obj/structure/transit_tube/Initialize()
 	. = ..(loc)

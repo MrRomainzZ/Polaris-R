@@ -107,7 +107,7 @@
 	default_emotes = list(
 		/decl/emote/audible/vox_shriek
 	)
-	inherent_verbs = list(/mob/living/carbon/human/proc/toggle_vox_pressure_seal)
+	inherent_verbs = list(TYPE_PROC_REF(/mob/living/carbon/human, toggle_vox_pressure_seal))
 	var/list/current_pressure_toggle = list()
 
 /datum/species/vox/get_random_name(var/gender)

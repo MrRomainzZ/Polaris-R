@@ -7,14 +7,14 @@
 	ability_icon_state = "ling_sting_cryo"
 	genomecost = 1
 	power_category = CHANGELING_POWER_STINGS
-	verbpath = /mob/proc/changeling_cryo_sting
+	verbpath = TYPE_PROC_REF(/mob, changeling_cryo_sting)
 
 /mob/proc/changeling_cryo_sting()
 	set category = "Changeling"
 	set name = "Cryogenic Sting (20)"
 	set desc = "Chills and freezes a biological creature."
 
-	var/mob/living/carbon/T = changeling_sting(20,/mob/proc/changeling_cryo_sting)
+	var/mob/living/carbon/T = changeling_sting(20,TYPE_PROC_REF(/mob, changeling_cryo_sting))
 	if(!T)
 		return 0
 	add_attack_logs(src,T,"Cryo sting (changeling)")

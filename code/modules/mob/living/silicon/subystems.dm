@@ -25,7 +25,7 @@
 
 /mob/living/silicon/robot/syndicate
 	register_alarms = 0
-	silicon_subsystems = list(/mob/living/silicon/proc/subsystem_law_manager)
+	silicon_subsystems = list(TYPE_PROC_REF(/mob/living/silicon, subsystem_law_manager))
 
 /mob/living/silicon/proc/init_subsystems()
 	alarm_monitor 	= new(src)
@@ -39,7 +39,7 @@
 		return
 
 	for(var/datum/alarm_handler/AH in SSalarm.handlers)
-		AH.register_alarm(src, /mob/living/silicon/proc/receive_alarm)
+		AH.register_alarm(src, TYPE_PROC_REF(/mob/living/silicon, receive_alarm))
 		queued_alarms[AH] = list()	// Makes sure alarms remain listed in consistent order
 
 /********************

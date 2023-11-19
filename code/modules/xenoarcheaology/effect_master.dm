@@ -64,24 +64,24 @@
 
 /datum/component/artifact_master/proc/DoRegistry()
 //Melee Hit
-	RegisterSignal(holder, COMSIG_PARENT_ATTACKBY, /datum/component/artifact_master/proc/on_attackby, override = FALSE)
+	RegisterSignal(holder, COMSIG_PARENT_ATTACKBY, TYPE_PROC_REF(/datum/component/artifact_master, on_attackby), override = FALSE)
 //Explosions
-	RegisterSignal(holder, COMSIG_ATOM_EX_ACT, /datum/component/artifact_master/proc/on_exact, override = FALSE)
+	RegisterSignal(holder, COMSIG_ATOM_EX_ACT, TYPE_PROC_REF(/datum/component/artifact_master, on_exact), override = FALSE)
 //Bullets
-	RegisterSignal(holder, COMSIG_ATOM_BULLET_ACT, /datum/component/artifact_master/proc/on_bullet, override = FALSE)
+	RegisterSignal(holder, COMSIG_ATOM_BULLET_ACT, TYPE_PROC_REF(/datum/component/artifact_master, on_bullet), override = FALSE)
 
 //Attackhand
-	RegisterSignal(holder, COMSIG_ATOM_ATTACK_HAND, /datum/component/artifact_master/proc/on_attack_hand, override = FALSE)
+	RegisterSignal(holder, COMSIG_ATOM_ATTACK_HAND, TYPE_PROC_REF(/datum/component/artifact_master, on_attack_hand), override = FALSE)
 
 //Bumped / Bumping
-	RegisterSignal(holder, COMSIG_MOVABLE_BUMP, /datum/component/artifact_master/proc/on_bump, override = FALSE)
-	RegisterSignal(holder, COMSIG_ATOM_BUMPED, /datum/component/artifact_master/proc/on_bumped, override = FALSE)
+	RegisterSignal(holder, COMSIG_MOVABLE_BUMP, TYPE_PROC_REF(/datum/component/artifact_master, on_bump), override = FALSE)
+	RegisterSignal(holder, COMSIG_ATOM_BUMPED, TYPE_PROC_REF(/datum/component/artifact_master, on_bumped), override = FALSE)
 
 //Moved
-	RegisterSignal(holder, COMSIG_MOVABLE_MOVED, /datum/component/artifact_master/proc/on_moved, override = FALSE)
+	RegisterSignal(holder, COMSIG_MOVABLE_MOVED, TYPE_PROC_REF(/datum/component/artifact_master, on_moved), override = FALSE)
 
 //Splashed with a reagent.
-	RegisterSignal(holder, COMSIG_REAGENTS_TOUCH, /datum/component/artifact_master/proc/on_reagent, override = FALSE)
+	RegisterSignal(holder, COMSIG_REAGENTS_TOUCH, TYPE_PROC_REF(/datum/component/artifact_master, on_reagent), override = FALSE)
 
 /*
  *

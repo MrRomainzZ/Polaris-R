@@ -101,7 +101,7 @@
 	if(href_list["copy"])
 		if(stat & (BROKEN|NOPOWER))
 			return
-		addtimer(CALLBACK(src, .proc/copy_operation, usr), 0)
+		addtimer(CALLBACK(src, PROC_REF(copy_operation), usr), 0)
 
 	else if(href_list["remove"])
 		if(copyitem)

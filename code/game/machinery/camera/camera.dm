@@ -65,7 +65,7 @@
 
 /obj/machinery/camera/Destroy()
 	if(isMotion())
-		unsense_proximity(callback = /atom/proc/HasProximity)
+		unsense_proximity(callback = TYPE_PROC_REF(/atom, HasProximity))
 	deactivate(null, 0) //kick anyone viewing out
 	if(assembly)
 		qdel(assembly)

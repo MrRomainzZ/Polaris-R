@@ -446,7 +446,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 					ENABLE_BITFIELD(options, SDQL2_OPTION_DO_NOT_AUTOGC)
 
 /datum/SDQL2_query/proc/ARun()
-	INVOKE_ASYNC(src, .proc/Run)
+	INVOKE_ASYNC(src, PROC_REF(Run))
 
 /datum/SDQL2_query/proc/Run()
 	if(SDQL2_IS_RUNNING)
@@ -746,7 +746,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 	for(var/arg in arguments)
 		new_args[++new_args.len] = SDQL_expression(source, arg)
 	if(object == GLOB) // Global proc.
-		procname = "/proc/[procname]"
+		procname = "GLOBAL_PROC_REF([procname])"
 		return superuser? (call(procname)(new_args)) : (WrapAdminProcCall(GLOBAL_PROC, procname, new_args))
 	return superuser? (call(object, procname)(new_args)) : (WrapAdminProcCall(object, procname, new_args))
 

@@ -6,7 +6,7 @@
 	ability_icon_state = "ling_anatomic_panacea"
 	genomecost = 1
 	power_category = CHANGELING_POWER_HEALTH
-	verbpath = /mob/proc/changeling_panacea
+	verbpath = TYPE_PROC_REF(/mob, changeling_panacea)
 
 //Heals the things that the other regenerative abilities don't.
 /mob/proc/changeling_panacea()

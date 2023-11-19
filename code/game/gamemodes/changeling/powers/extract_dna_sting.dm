@@ -6,7 +6,7 @@
 	genomecost = 0
 	power_category = CHANGELING_POWER_INHERENT
 	allowduringlesserform = 1
-	verbpath = /mob/proc/changeling_extract_dna_sting
+	verbpath = TYPE_PROC_REF(/mob, changeling_extract_dna_sting)
 
 /mob/proc/changeling_extract_dna_sting()
 	set category = "Changeling"
@@ -19,7 +19,7 @@
 	if(!changeling)
 		return 0
 
-	var/mob/living/carbon/human/T = changeling_sting(40, /mob/proc/changeling_extract_dna_sting)
+	var/mob/living/carbon/human/T = changeling_sting(40, TYPE_PROC_REF(/mob, changeling_extract_dna_sting))
 
 	if(!T)
 		return
@@ -38,7 +38,7 @@
 
 	add_attack_logs(src,T,"DNA extraction sting (changeling)")
 
-	var/saved_dna = T.dna.Clone() /// Prevent transforming bugginess. 
+	var/saved_dna = T.dna.Clone() /// Prevent transforming bugginess.
 	var/datum/absorbed_dna/newDNA = new(T.real_name, saved_dna, T.species.name, T.languages, T.identifying_gender, T.flavor_text, T.modifiers)
 	absorbDNA(newDNA)
 

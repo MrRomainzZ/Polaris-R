@@ -6,7 +6,7 @@
 	genomecost = 0
 	power_category = CHANGELING_POWER_INHERENT
 	allowduringlesserform = 1
-	verbpath = /mob/proc/changeling_fakedeath
+	verbpath = TYPE_PROC_REF(/mob, changeling_fakedeath)
 
 //Fake our own death and fully heal. You will appear to be dead but regenerate fully after a short delay.
 /mob/proc/changeling_fakedeath()

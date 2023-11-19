@@ -23,12 +23,12 @@
 #define QDESTROYING(X) (!X || X.gc_destroyed == GC_CURRENTLY_BEING_QDELETED)
 
 //Qdel helper macros.
-#define QDEL_IN(item, time) addtimer(CALLBACK(GLOBAL_PROC, .proc/qdel, item), time, TIMER_STOPPABLE)
-#define QDEL_IN_CLIENT_TIME(item, time) addtimer(CALLBACK(GLOBAL_PROC, .proc/qdel, item), time, TIMER_STOPPABLE | TIMER_CLIENT_TIME)
+#define QDEL_IN(item, time) addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(qdel), item), time, TIMER_STOPPABLE)
+#define QDEL_IN_CLIENT_TIME(item, time) addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(qdel), item), time, TIMER_STOPPABLE | TIMER_CLIENT_TIME)
 #define QDEL_NULL(x) if(x) { qdel(x) ; x = null }
 #define QDEL_NULL_LIST(x) if (x) { for(var/y in x) { qdel(y) } }; if (x) { x.Cut(); x = null; }
 #define QDEL_LIST(L) if(L) { for(var/I in L) qdel(I); L.Cut(); }
-#define QDEL_LIST_IN(L, time) addtimer(CALLBACK(GLOBAL_PROC, .proc/______qdel_list_wrapper, L), time, TIMER_STOPPABLE)
+#define QDEL_LIST_IN(L, time) addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(______qdel_list_wrapper), L), time, TIMER_STOPPABLE)
 #define QDEL_LIST_ASSOC(L) if(L) { for(var/I in L) { qdel(L[I]); qdel(I); } L.Cut(); }
 #define QDEL_LIST_ASSOC_VAL(L) if(L) { for(var/I in L) qdel(L[I]); L.Cut(); }
 

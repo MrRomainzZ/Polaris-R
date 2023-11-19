@@ -210,7 +210,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	var/Angle = round(Get_Angle(src,M))
 	var/matrix/rot_matrix = matrix()
 	rot_matrix.Turn(Angle)
-	addtimer(CALLBACK(src, .proc/finish_shot, target), rotation_speed)
+	addtimer(CALLBACK(src, PROC_REF(finish_shot), target), rotation_speed)
 	animate(src, transform = rot_matrix, rotation_speed, easing = SINE_EASING)
 
 	set_dir(arctan(transform.b, transform.a) > 0 ? NORTH : SOUTH)
@@ -255,7 +255,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	var/obj/machinery/pointdefense_control/PC = get_controller()
 	if(!istype(PC))
 		return
-	
+
 	// Compile list of known targets
 	var/list/existing_targets = list()
 	for(var/weakref/WR in PC.targets)
@@ -279,7 +279,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 			engaging = target
 			Shoot(target)
 			return
-		
+
 /obj/machinery/pointdefense/proc/targeting_check(var/obj/effect/meteor/M)
 	// Target in range
 	var/list/connected_z_levels = GetConnectedZlevels(get_z(src))
@@ -290,7 +290,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	// If we can shoot it, then shoot
 	if(emagged || !space_los(M))
 		return FALSE
-	
+
 	return TRUE
 
 /obj/machinery/pointdefense/RefreshParts()

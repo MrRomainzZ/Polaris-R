@@ -39,7 +39,7 @@
 	display_name = "Medical"
 	channels = list("Medical" = 1)
 	networks = list(NETWORK_MEDICAL)
-	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor)
+	subsystems = list(TYPE_PROC_REF(/mob/living/silicon, subsystem_crew_monitor))
 	can_be_pushed = 0
 
 /obj/item/robot_module/robot/medical/surgeon
@@ -221,7 +221,7 @@
 	display_name = "Engineering"
 	channels = list("Engineering" = 1)
 	networks = list(NETWORK_ENGINEERING)
-	subsystems = list(/mob/living/silicon/proc/subsystem_power_monitor)
+	subsystems = list(TYPE_PROC_REF(/mob/living/silicon, subsystem_power_monitor))
 	sprites = list(
 		"M-USE NanoTrasen"   = "robotEngi",
 		"Haruka"             = "marinaENG",
@@ -333,7 +333,7 @@
 	display_name = "Security"
 	channels = list("Security" = 1)
 	networks = list(NETWORK_SECURITY)
-	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor)
+	subsystems = list(TYPE_PROC_REF(/mob/living/silicon, subsystem_crew_monitor))
 	can_be_pushed = 0
 	supported_upgrades = list(/obj/item/borg/upgrade/tasercooler)
 	modules = list(

@@ -5,7 +5,7 @@
 	ability_icon_state = "ling_space_suit"
 	genomecost = 1
 	power_category = CHANGELING_POWER_ARMOR
-	verbpath = /mob/proc/changeling_spacesuit
+	verbpath = TYPE_PROC_REF(/mob, changeling_spacesuit)
 
 /mob/proc/changeling_spacesuit()
 	set category = "Changeling"
@@ -21,7 +21,7 @@
 	ability_icon_state = "ling_armor"
 	genomecost = 3
 	power_category = CHANGELING_POWER_ARMOR
-	verbpath = /mob/proc/changeling_spacearmor
+	verbpath = TYPE_PROC_REF(/mob, changeling_spacearmor)
 
 /mob/proc/changeling_spacearmor()
 	set category = "Changeling"

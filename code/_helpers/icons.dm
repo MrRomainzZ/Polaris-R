@@ -914,7 +914,7 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
 /proc/set_cached_examine_icon(var/atom/A, var/icon/I, var/expiry = 12000)
 	GLOB.cached_examine_icons[weakref(A)] = I
 	if(expiry)
-		addtimer(CALLBACK(GLOBAL_PROC, .proc/uncache_examine_icon, weakref(A)), expiry, TIMER_UNIQUE)
+		addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(uncache_examine_icon), weakref(A)), expiry, TIMER_UNIQUE)
 
 /proc/get_cached_examine_icon(var/atom/A)
 	var/weakref/WR = weakref(A)

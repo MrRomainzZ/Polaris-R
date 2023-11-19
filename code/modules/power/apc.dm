@@ -134,7 +134,7 @@ GLOBAL_LIST_EMPTY(apcs)
 	var/static/list/status_overlays_lighting
 	var/static/list/status_overlays_environ
 	var/alarms_hidden = FALSE //If power alarms from this APC are visible on consoles
-	
+
 	var/nightshift_lights = FALSE
 	var/nightshift_setting = NIGHTSHIFT_AUTO
 	var/last_nightshift_switch = 0
@@ -991,7 +991,7 @@ GLOBAL_LIST_EMPTY(apcs)
 			for(var/obj/machinery/light/L in area)
 				if(!initial(L.no_emergency)) //If there was an override set on creation, keep that override
 					L.no_emergency = emergency_lights
-					INVOKE_ASYNC(L, /obj/machinery/light/.proc/update, FALSE)
+					INVOKE_ASYNC(L, TYPE_PROC_REF(/obj/machinery/light, update), FALSE)
 				CHECK_TICK
 		if("overload")
 			if(locked_exception) // Reusing for simplicity!

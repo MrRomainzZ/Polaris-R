@@ -68,7 +68,7 @@
 
 		target.add_overlay(image_overlay, TRUE)
 		to_chat(user, "Bomb has been planted. Timer counting down from [timer].")
-		addtimer(CALLBACK(src, .proc/detonate), timer SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(detonate)), timer SECONDS)
 
 /obj/item/plastique/proc/set_target(var/atom/T)
 	if(!isatom(T))

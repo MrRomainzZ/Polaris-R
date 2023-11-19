@@ -276,7 +276,7 @@ var/global/list/string_slot_flags = list(
 /proc/init_crafting_recipes(list/crafting_recipes)
 	for(var/path in subtypesof(/datum/crafting_recipe))
 		var/datum/crafting_recipe/recipe = new path()
-		recipe.reqs = sortList(recipe.reqs, /proc/cmp_crafting_req_priority)
+		recipe.reqs = sortList(recipe.reqs, GLOBAL_PROC_REF(cmp_crafting_req_priority))
 		crafting_recipes += recipe
 	return crafting_recipes
 /* // Uncomment to debug chemical reaction list.

@@ -5,7 +5,7 @@ Make a datum in asset_list_items.dm with your assets for your thing.
 Checkout asset_list.dm for the helper subclasses
 The simple subclass will most like be of use for most cases.
 Then call get_asset_datum() with the type of the datum you created and store the return
-Then call .send(client) on that stored return value. 
+Then call .send(client) on that stored return value.
 
 Note: If your code uses output() with assets you will need to call asset_flush on the client and wait for it to return before calling output(). You only need do this if .send(client) returned TRUE
 */
@@ -33,7 +33,7 @@ Note: If your code uses output() with assets you will need to call asset_flush o
 				return
 		else
 			return
-	
+
 	var/list/unreceived = list()
 
 	for (var/asset_name in asset_list)
@@ -43,7 +43,7 @@ Note: If your code uses output() with assets you will need to call asset_flush o
 		var/asset_file = asset.resource
 		if (!asset_file)
 			continue
-		
+
 		var/asset_md5 = asset.md5
 		if (client.sent_assets[asset_name] == asset_md5)
 			continue
@@ -60,7 +60,7 @@ Note: If your code uses output() with assets you will need to call asset_flush o
 				client << browse_rsc(ACI.resource, asset)
 
 		client.sent_assets |= unreceived
-		addtimer(CALLBACK(client, /client/proc/asset_cache_update_json), 1 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE)
+		addtimer(CALLBACK(client, TYPE_PROC_REF(/client, asset_cache_update_json)), 1 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE)
 		return TRUE
 	return FALSE
 
@@ -84,7 +84,7 @@ Note: If your code uses output() with assets you will need to call asset_flush o
 //icons and virtual assets get copied to the dyn rsc before use
 /proc/register_asset(asset_name, asset)
 	var/datum/asset_cache_item/ACI = new(asset_name, asset)
-	
+
 	//this is technically never something that was supported and i want metrics on how often it happens if at all.
 	if (SSassets.cache[asset_name])
 		var/datum/asset_cache_item/OACI = SSassets.cache[asset_name]
@@ -107,4 +107,3 @@ Note: If your code uses output() with assets you will need to call asset_flush o
 //The same asset will always lead to the same asset name
 /proc/generate_asset_name(file)
 	return "asset.[md5(fcopy_rsc(file))]"
-

@@ -55,7 +55,7 @@
 	. =  damage >= min_broken_damage || (status & ORGAN_BROKEN) || is_stump() // can't use is_broken() as the limb has ORGAN_CUT_AWAY
 
 // Human mob procs:
-// Checks the organ list for limbs meeting a predicate. Way overengineered for such a limited use 
+// Checks the organ list for limbs meeting a predicate. Way overengineered for such a limited use
 // case but I can see it being expanded in the future if meat limbs or doona limbs use it.
 /mob/living/carbon/human/proc/get_modular_limbs(var/return_first_found = FALSE, var/validate_proc)
 	for(var/bp in organs)
@@ -63,7 +63,7 @@
 		if(!validate_proc || call(E, validate_proc)(src) > MODULAR_BODYPART_INVALID)
 			LAZYADD(., E)
 			if(return_first_found)
-				return 
+				return
 	// Prune children so we can't remove every individual component of an entire prosthetic arm
 	// piece by piece. Technically a circular dependency here would remove the limb entirely but
 	// if there's a parent whose child is also its parent, there's something wrong regardless.
@@ -74,11 +74,11 @@
 
 // Called in robotize(), replaced() and removed() to update our modular limb verbs.
 /mob/living/carbon/human/proc/refresh_modular_limb_verbs()
-	if(length(get_modular_limbs(return_first_found = TRUE, validate_proc = /obj/item/organ/external/proc/can_attach_modular_limb_here)))
+	if(length(get_modular_limbs(return_first_found = TRUE, validate_proc = TYPE_PROC_REF(/obj/item/organ/external, can_attach_modular_limb_here))))
 		verbs |= .proc/attach_limb_verb
 	else
 		verbs -= .proc/attach_limb_verb
-	if(length(get_modular_limbs(return_first_found = TRUE, validate_proc = /obj/item/organ/external/proc/can_remove_modular_limb)))
+	if(length(get_modular_limbs(return_first_found = TRUE, validate_proc = TYPE_PROC_REF(/obj/item/organ/external, can_remove_modular_limb))))
 		verbs |= .proc/detach_limb_verb
 	else
 		verbs -= .proc/detach_limb_verb
@@ -133,7 +133,7 @@
 	if(parent.check_modular_limb_damage(src))
 		to_chat(src, SPAN_WARNING("Your [parent.name] is too damaged to detach anything from it."))
 		return FALSE
-	return (E in get_modular_limbs(return_first_found = FALSE, validate_proc = /obj/item/organ/external/proc/can_remove_modular_limb))
+	return (E in get_modular_limbs(return_first_found = FALSE, validate_proc = TYPE_PROC_REF(/obj/item/organ/external, can_remove_modular_limb)))
 
 // Verbs below:
 // Add or remove robotic limbs; check refresh_modular_limb_verbs() above.
@@ -171,7 +171,7 @@
 	set category = "Object"
 	set desc = "Detach one of your limbs."
 
-	var/list/detachable_limbs = get_modular_limbs(return_first_found = FALSE, validate_proc = /obj/item/organ/external/proc/can_remove_modular_limb)
+	var/list/detachable_limbs = get_modular_limbs(return_first_found = FALSE, validate_proc = TYPE_PROC_REF(/obj/item/organ/external, can_remove_modular_limb))
 	if(!length(detachable_limbs))
 		to_chat(src, SPAN_WARNING("You have no detachable limbs."))
 		return FALSE

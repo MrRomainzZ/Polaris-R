@@ -242,7 +242,7 @@ var/global/list/meteors_catastrophic = list(
 
 		if(allow_recursion)
 			if(!QDELETED(src))
-				addtimer(CALLBACK(src, .proc/move_toward, target, delay, allow_recursion), delay)
+				addtimer(CALLBACK(src, PROC_REF(move_toward), target, delay, allow_recursion), delay)
 
 	else if(!QDELETED(src))	// Then delete ourselves if we haven't been deleted already.
 		qdel(src)

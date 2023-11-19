@@ -42,7 +42,7 @@ SUBSYSTEM_DEF(robots)
 				LAZYINITLIST(modules_by_category[module_category])
 				LAZYSET(modules_by_category[module_category], module_name, module)
 			all_module_names |= module_name
-	all_module_names = sortTim(all_module_names, /proc/cmp_text_asc)
+	all_module_names = sortTim(all_module_names, GLOBAL_PROC_REF(cmp_text_asc))
 
 /datum/controller/subsystem/robots/proc/get_available_modules(module_category, crisis_mode, include_override)
 	. = list()

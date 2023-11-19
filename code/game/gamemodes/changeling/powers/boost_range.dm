@@ -7,7 +7,7 @@
 	genomecost = 1
 	power_category = CHANGELING_POWER_STINGS
 	allowduringlesserform = 1
-	verbpath = /mob/proc/changeling_boost_range
+	verbpath = TYPE_PROC_REF(/mob, changeling_boost_range)
 
 //Boosts the range of your next sting attack by 1
 /mob/proc/changeling_boost_range()

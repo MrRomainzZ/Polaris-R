@@ -187,7 +187,7 @@ var/global/list/ai_verbs_default = list(
 
 			on_mob_init()
 
-	addtimer(CALLBACK(src, .proc/init_powersupply), 5)
+	addtimer(CALLBACK(src, PROC_REF(init_powersupply)), 5)
 
 	ai_list += src
 

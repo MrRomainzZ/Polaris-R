@@ -16,7 +16,7 @@
 			qdel(src)
 			return
 		setup_repair_needs()
-	addtimer(CALLBACK(src, .proc/validate_gun_type), 30 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(validate_gun_type)), 30 SECONDS)
 
 /obj/item/broken_gun/proc/validate_gun_type()
 	if(!my_guntype && !QDELETED(src))

@@ -10,7 +10,7 @@
 
 /obj/effect/bhole/Initialize()
 	. = ..()
-	addtimer(CALLBACK(src, .proc/controller), 4)
+	addtimer(CALLBACK(src, PROC_REF(controller)), 4)
 
 /obj/effect/bhole/proc/controller()
 	while(src)

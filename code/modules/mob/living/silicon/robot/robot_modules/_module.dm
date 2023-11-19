@@ -77,10 +77,10 @@
 	handle_shell(R)
 
 	if(R.radio)
-		addtimer(CALLBACK(R.radio, /obj/item/radio/proc/recalculateChannels), 0)
+		addtimer(CALLBACK(R.radio, TYPE_PROC_REF(/obj/item/radio, recalculateChannels)), 0)
 
 	R.set_module_sprites(sprites)
-	addtimer(CALLBACK(R, /mob/living/silicon/robot/proc/choose_icon, R.module_sprites.len + 1, R.module_sprites), 0)
+	addtimer(CALLBACK(R, TYPE_PROC_REF(/mob/living/silicon/robot, choose_icon), R.module_sprites.len + 1, R.module_sprites), 0)
 
 /obj/item/robot_module/proc/build_equipment()
 	SHOULD_CALL_PARENT(TRUE)

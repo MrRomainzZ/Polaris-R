@@ -4,7 +4,7 @@
 	ability_icon_state = "ling_absorb_dna"
 	genomecost = 0
 	power_category = CHANGELING_POWER_INHERENT
-	verbpath = /mob/living/proc/changeling_absorb_dna
+	verbpath = TYPE_PROC_REF(/mob/living, changeling_absorb_dna)
 
 //Absorbs the victim's DNA. Requires a strong grip on the victim.
 //Doesn't cost anything as it's the most basic ability.

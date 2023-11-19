@@ -8,7 +8,7 @@
 	ability_icon_state = "ling_bioelectrogenesis"
 	genomecost = 2
 	power_category = CHANGELING_POWER_ENHANCEMENTS
-	verbpath = /mob/living/carbon/human/proc/changeling_bioelectrogenesis
+	verbpath = TYPE_PROC_REF(/mob/living/carbon/human, changeling_bioelectrogenesis)
 
 //Recharge whatever's in our hand, or shock people.
 /mob/living/carbon/human/proc/changeling_bioelectrogenesis()

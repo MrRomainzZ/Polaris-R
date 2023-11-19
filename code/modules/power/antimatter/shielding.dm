@@ -28,7 +28,7 @@
 
 /obj/machinery/am_shielding/Initialize()
 	. = ..()
-	addtimer(CALLBACK(src, .proc/controllerscan), 1 SECOND)
+	addtimer(CALLBACK(src, PROC_REF(controllerscan)), 1 SECOND)
 
 /obj/machinery/am_shielding/proc/controllerscan(var/priorscan = 0)
 	//Make sure we are the only one here

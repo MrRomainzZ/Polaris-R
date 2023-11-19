@@ -41,7 +41,7 @@
 	..()
 	switch (into_slot)
 		if (slot_wear_suit, slot_l_hand, slot_r_hand, slot_belt)
-			GLOB.moved_event.register(user, src, /obj/item/storage/bag/ore/proc/autoload, user)
+			GLOB.moved_event.register(user, src, TYPE_PROC_REF(/obj/item/storage/bag/ore, autoload), user)
 
 
 /obj/item/storage/bag/ore/dropped(mob/living/user)

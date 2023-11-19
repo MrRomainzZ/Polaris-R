@@ -7,14 +7,14 @@
 	genomecost = 2
 	power_category = CHANGELING_POWER_STINGS
 	allowduringlesserform = 1
-	verbpath = /mob/proc/changeling_silence_sting
+	verbpath = TYPE_PROC_REF(/mob, changeling_silence_sting)
 
 /mob/proc/changeling_silence_sting()
 	set category = "Changeling"
 	set name = "Silence sting (10)"
 	set desc="Sting target"
 
-	var/mob/living/carbon/T = changeling_sting(10,/mob/proc/changeling_silence_sting)
+	var/mob/living/carbon/T = changeling_sting(10,TYPE_PROC_REF(/mob, changeling_silence_sting))
 	if(!T)	return 0
 	add_attack_logs(src,T,"Silence sting (changeling)")
 	var/duration = 30

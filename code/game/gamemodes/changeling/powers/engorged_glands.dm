@@ -5,7 +5,7 @@
 	genomecost = 1
 	power_category = CHANGELING_POWER_ENHANCEMENTS
 	isVerb = 0
-	verbpath = /mob/proc/changeling_engorgedglands
+	verbpath = TYPE_PROC_REF(/mob, changeling_engorgedglands)
 
 //Increases macimum chemical storage
 /mob/proc/changeling_engorgedglands()

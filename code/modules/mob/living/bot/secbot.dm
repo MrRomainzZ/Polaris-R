@@ -199,7 +199,7 @@
 	say("Down on the floor, [suspect_name]! You have [SECBOT_WAIT_TIME*2] seconds to comply.")
 	playsound(src, pick(preparing_arrest_sounds), 50)
 	// Register to be told when the target moves
-	GLOB.moved_event.register(target, src, /mob/living/bot/secbot/proc/target_moved)
+	GLOB.moved_event.register(target, src, TYPE_PROC_REF(/mob/living/bot/secbot, target_moved))
 
 // Callback invoked if the registered target moves
 /mob/living/bot/secbot/proc/target_moved(atom/movable/moving_instance, atom/old_loc, atom/new_loc)

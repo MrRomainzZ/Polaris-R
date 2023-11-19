@@ -7,7 +7,7 @@
 	ability_icon_state = "ling_augmented_eyesight"
 	genomecost = 2
 	power_category = CHANGELING_POWER_ENHANCEMENTS
-	verbpath = /mob/proc/changeling_augmented_eyesight
+	verbpath = TYPE_PROC_REF(/mob, changeling_augmented_eyesight)
 
 /mob/proc/changeling_augmented_eyesight()
 	set category = "Changeling"

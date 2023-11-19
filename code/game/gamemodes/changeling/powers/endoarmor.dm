@@ -5,7 +5,7 @@
 	genomecost = 1
 	power_category = CHANGELING_POWER_HEALTH
 	isVerb = 0
-	verbpath = /mob/proc/changeling_endoarmor
+	verbpath = TYPE_PROC_REF(/mob, changeling_endoarmor)
 
 /datum/modifier/endoarmor
 	name = "endoarmor"

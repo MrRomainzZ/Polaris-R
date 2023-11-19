@@ -7,7 +7,7 @@
 	genomecost = 0
 	power_category = CHANGELING_POWER_INHERENT
 	make_hud_button = 0
-	verbpath = /mob/proc/changeling_hiveupload
+	verbpath = TYPE_PROC_REF(/mob, changeling_hiveupload)
 
 /datum/power/changeling/hive_download
 	name = "Hive Absorb"
@@ -16,7 +16,7 @@
 	genomecost = 0
 	power_category = CHANGELING_POWER_INHERENT
 	make_hud_button = 0
-	verbpath = /mob/proc/changeling_hivedownload
+	verbpath = TYPE_PROC_REF(/mob, changeling_hivedownload)
 
 // HIVE MIND UPLOAD/DOWNLOAD DNA
 

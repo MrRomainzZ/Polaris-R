@@ -77,10 +77,10 @@
 /obj/item/shield_projector/rectangle/mecha/Initialize()
 	. = ..()
 	my_mech = loc
-	GLOB.moved_event.register(my_mech, src, /obj/item/shield_projector/proc/update_shield_positions)
+	GLOB.moved_event.register(my_mech, src, TYPE_PROC_REF(/obj/item/shield_projector, update_shield_positions))
 
 /obj/item/shield_projector/rectangle/mecha/Destroy()
-	GLOB.moved_event.unregister(my_mech, src, /obj/item/shield_projector/proc/update_shield_positions)
+	GLOB.moved_event.unregister(my_mech, src, TYPE_PROC_REF(/obj/item/shield_projector, update_shield_positions))
 	my_mech = null
 	..()
 

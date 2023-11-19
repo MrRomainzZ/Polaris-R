@@ -85,7 +85,7 @@ somewhere on that shuttle. Subtypes of these can be then used to perform ship ov
 		L.looking_elsewhere = 1
 		L.handle_vision()
 	user.set_viewsize(world.view + extra_view)
-	GLOB.moved_event.register(user, src, /obj/machinery/computer/ship/proc/unlook)
+	GLOB.moved_event.register(user, src, TYPE_PROC_REF(/obj/machinery/computer/ship, unlook))
 	// TODO GLOB.stat_set_event.register(user, src, /obj/machinery/computer/ship/proc/unlook)
 	LAZYDISTINCTADD(viewers, weakref(user))
 
@@ -96,7 +96,7 @@ somewhere on that shuttle. Subtypes of these can be then used to perform ship ov
 		L.looking_elsewhere = 0
 		L.handle_vision()
 	user.set_viewsize() // reset to default
-	GLOB.moved_event.unregister(user, src, /obj/machinery/computer/ship/proc/unlook)
+	GLOB.moved_event.unregister(user, src, TYPE_PROC_REF(/obj/machinery/computer/ship, unlook))
 	// TODO GLOB.stat_set_event.unregister(user, src, /obj/machinery/computer/ship/proc/unlook)
 	LAZYREMOVE(viewers, weakref(user))
 

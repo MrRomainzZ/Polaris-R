@@ -10,7 +10,7 @@
 	genomecost = 2
 	power_category = CHANGELING_POWER_ENHANCEMENTS
 	allowduringlesserform = 1
-	verbpath = /mob/living/proc/changeling_berserk
+	verbpath = TYPE_PROC_REF(/mob/living, changeling_berserk)
 
 // Makes the ling very upset.
 /mob/living/proc/changeling_berserk()

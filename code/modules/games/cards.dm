@@ -148,7 +148,7 @@
 		if(!islist(pickablecards[P.name]))
 			pickablecards[P.name] = list()
 		pickablecards[P.name] += P
-	sortTim(pickablecards, /proc/cmp_text_asc)
+	sortTim(pickablecards, GLOBAL_PROC_REF(cmp_text_asc))
 	var/pickedcard = input("Which card do you want to remove from the deck?")	as null|anything in pickablecards
 	if(!pickedcard || !LAZYLEN(pickablecards[pickedcard]) || !usr || !src)
 		return

@@ -117,7 +117,7 @@
 	verbs += /mob/living/silicon/pai/proc/choose_verbs
 
 	pda = new(src)
-	addtimer(CALLBACK(src, .proc/init_pda), 5)
+	addtimer(CALLBACK(src, PROC_REF(init_pda)), 5)
 
 /mob/living/silicon/pai/proc/init_pda()
 	set waitfor = FALSE

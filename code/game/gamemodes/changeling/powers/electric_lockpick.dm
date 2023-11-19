@@ -6,7 +6,7 @@
 	ability_icon_state = "ling_electric_lockpick"
 	genomecost = 3
 	power_category = CHANGELING_POWER_ENHANCEMENTS
-	verbpath = /mob/proc/changeling_electric_lockpick
+	verbpath = TYPE_PROC_REF(/mob, changeling_electric_lockpick)
 
 //Emag-lite
 /mob/proc/changeling_electric_lockpick()

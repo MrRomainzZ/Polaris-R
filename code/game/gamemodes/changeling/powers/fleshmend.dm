@@ -6,7 +6,7 @@
 	ability_icon_state = "ling_fleshmend"
 	genomecost = 1
 	power_category = CHANGELING_POWER_HEALTH
-	verbpath = /mob/proc/changeling_fleshmend
+	verbpath = TYPE_PROC_REF(/mob, changeling_fleshmend)
 
 //Starts healing you every second for 50 seconds. Can be used whilst unconscious.
 /mob/proc/changeling_fleshmend()

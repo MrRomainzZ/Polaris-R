@@ -37,9 +37,9 @@
 /turf/simulated/open/ChangeTurf(var/turf/N, var/tell_universe, var/force_lighting_update, var/preserve_outdoors)
 	var/turf/T = GetBelow(src)
 	if(T)
-		GLOB.turf_entered_event.unregister(T, src, .proc/BelowOpenUpdated)
-		GLOB.turf_exited_event.unregister(T, src, .proc/BelowOpenUpdated)
-		turf_changed_event.unregister(T, src, /atom/proc/update_icon)
+		GLOB.turf_entered_event.unregister(T, src, PROC_REF(BelowOpenUpdated))
+		GLOB.turf_exited_event.unregister(T, src, PROC_REF(BelowOpenUpdated))
+		turf_changed_event.unregister(T, src, TYPE_PROC_REF(/atom, update_icon))
 	. = ..()
 
 /turf/simulated/open/Initialize()
@@ -52,8 +52,8 @@
 	update()
 	var/turf/T = GetBelow(src)
 	if(T)
-		GLOB.turf_entered_event.register(T, src, .proc/BelowOpenUpdated)
-		GLOB.turf_exited_event.register(T, src, .proc/BelowOpenUpdated)
+		GLOB.turf_entered_event.register(T, src, PROC_REF(BelowOpenUpdated))
+		GLOB.turf_exited_event.register(T, src, PROC_REF(BelowOpenUpdated))
 	if(is_outdoors())
 		SSplanets.addTurf(src)
 
@@ -73,7 +73,7 @@
 /turf/simulated/open/proc/update()
 	plane = OPENSPACE_PLANE + src.z
 	below = GetBelow(src)
-	turf_changed_event.register(below, src, /atom/proc/update_icon)
+	turf_changed_event.register(below, src, TYPE_PROC_REF(/atom, update_icon))
 	levelupdate()
 	below.update_icon() // So the 'ceiling-less' overlay gets added.
 	for(var/atom/movable/A in src)

@@ -1289,7 +1289,7 @@ About the new airlock wires panel:
 					if(!has_beeped)
 						playsound(src, 'sound/machines/buzz-two.ogg', 50, 0)
 						has_beeped = 1
-					addtimer(CALLBACK(src, .proc/close), (normalspeed ? 50 : 5))
+					addtimer(CALLBACK(src, PROC_REF(close)), (normalspeed ? 50 : 5))
 					return
 
 	for(var/turf/turf in locs)

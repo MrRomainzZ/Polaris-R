@@ -6,7 +6,7 @@
 	ability_icon_state = "ling_armblade"
 	genomecost = 2
 	power_category = CHANGELING_POWER_WEAPONS
-	verbpath = /mob/proc/changeling_arm_blade
+	verbpath = TYPE_PROC_REF(/mob, changeling_arm_blade)
 
 //Grows a scary, and powerful arm blade.
 /mob/proc/changeling_arm_blade()
@@ -32,7 +32,7 @@
 	ability_icon_state = "ling_claw"
 	genomecost = 1
 	power_category = CHANGELING_POWER_WEAPONS
-	verbpath = /mob/proc/changeling_claw
+	verbpath = TYPE_PROC_REF(/mob, changeling_claw)
 
 //Grows a scary, and powerful claw.
 /mob/proc/changeling_claw()

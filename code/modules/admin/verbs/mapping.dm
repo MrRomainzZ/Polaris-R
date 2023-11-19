@@ -126,44 +126,44 @@ GLOBAL_LIST_BOILERPLATE(all_debugging_effects, /obj/effect/debugging)
 	feedback_add_details("admin_verb","mIRD") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 var/global/list/debug_verbs = list (
-        /client/proc/do_not_use_these
-        ,/client/proc/camera_view
-        ,/client/proc/sec_camera_report
-        ,/client/proc/intercom_view
-        ,/client/proc/Cell
-        ,/client/proc/atmosscan
-        ,/client/proc/powerdebug
-        ,/client/proc/count_objects_on_z_level
-        ,/client/proc/count_objects_all
-        ,/client/proc/cmd_assume_direct_control
-        ,/client/proc/jump_to_dead_group
-        ,/client/proc/startSinglo
-        ,/client/proc/set_server_fps
-        ,/client/proc/cmd_admin_grantfullaccess
-        ,/client/proc/kaboom
-        ,/client/proc/cmd_admin_areatest
-        ,/client/proc/cmd_admin_rejuvenate
-        ,/datum/admins/proc/show_traitor_panel
-        ,/client/proc/print_jobban_old
-        ,/client/proc/print_jobban_old_filter
-        ,/client/proc/forceEvent
-        ,/client/proc/break_all_air_groups
-        ,/client/proc/regroup_all_air_groups
-        ,/client/proc/kill_pipe_processing
-        ,/client/proc/kill_air_processing
-        ,/client/proc/disable_communication
-        ,/client/proc/disable_movement
-        ,/client/proc/Zone_Info
-        ,/client/proc/Test_ZAS_Connection
-        ,/client/proc/ZoneTick
-        ,/client/proc/rebootAirMaster
-        ,/client/proc/hide_debug_verbs
-        ,/client/proc/testZAScolors
-        ,/client/proc/testZAScolors_remove
-        ,/datum/admins/proc/setup_supermatter
-        ,/client/proc/atmos_toggle_debug
-        ,/client/proc/spawn_tanktransferbomb
-        ,/client/proc/take_picture
+        TYPE_PROC_REF(/client, do_not_use_these)
+        ,TYPE_PROC_REF(/client, camera_view)
+        ,TYPE_PROC_REF(/client, sec_camera_report)
+        ,TYPE_PROC_REF(/client, intercom_view)
+        ,TYPE_PROC_REF(/client, Cell)
+        ,TYPE_PROC_REF(/client, atmosscan)
+        ,TYPE_PROC_REF(/client, powerdebug)
+        ,TYPE_PROC_REF(/client, count_objects_on_z_level)
+        ,TYPE_PROC_REF(/client, count_objects_all)
+        ,TYPE_PROC_REF(/client, cmd_assume_direct_control)
+        ,TYPE_PROC_REF(/client, jump_to_dead_group)
+        ,TYPE_PROC_REF(/client, startSinglo)
+        ,TYPE_PROC_REF(/client, set_server_fps)
+        ,TYPE_PROC_REF(/client, cmd_admin_grantfullaccess)
+        ,TYPE_PROC_REF(/client, kaboom)
+        ,TYPE_PROC_REF(/client, cmd_admin_areatest)
+        ,TYPE_PROC_REF(/client, cmd_admin_rejuvenate)
+        ,TYPE_PROC_REF(/datum/admins, show_traitor_panel)
+        ,TYPE_PROC_REF(/client, print_jobban_old)
+        ,TYPE_PROC_REF(/client, print_jobban_old_filter)
+        ,TYPE_PROC_REF(/client, forceEvent)
+        ,TYPE_PROC_REF(/client, break_all_air_groups)
+        ,TYPE_PROC_REF(/client, regroup_all_air_groups)
+        ,TYPE_PROC_REF(/client, kill_pipe_processing)
+        ,TYPE_PROC_REF(/client, kill_air_processing)
+        ,TYPE_PROC_REF(/client, disable_communication)
+        ,TYPE_PROC_REF(/client, disable_movement)
+        ,TYPE_PROC_REF(/client, Zone_Info)
+        ,TYPE_PROC_REF(/client, Test_ZAS_Connection)
+        ,TYPE_PROC_REF(/client, ZoneTick)
+        ,TYPE_PROC_REF(/client, rebootAirMaster)
+        ,TYPE_PROC_REF(/client, hide_debug_verbs)
+        ,TYPE_PROC_REF(/client, testZAScolors)
+        ,TYPE_PROC_REF(/client, testZAScolors_remove)
+        ,TYPE_PROC_REF(/datum/admins, setup_supermatter)
+        ,TYPE_PROC_REF(/client, atmos_toggle_debug)
+        ,TYPE_PROC_REF(/client, spawn_tanktransferbomb)
+        ,TYPE_PROC_REF(/client, take_picture)
 	)
 
 

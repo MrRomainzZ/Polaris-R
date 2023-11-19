@@ -55,13 +55,13 @@
 		user.set_machine(tgui_host())
 		user.reset_view(linked)
 	user.set_viewsize(world.view + extra_view)
-	GLOB.moved_event.register(user, src, /datum/tgui_module/ship/proc/unlook)
+	GLOB.moved_event.register(user, src, TYPE_PROC_REF(/datum/tgui_module/ship, unlook))
 	LAZYDISTINCTADD(viewers, weakref(user))
 
 /datum/tgui_module/ship/proc/unlook(var/mob/user)
 	user.reset_view()
 	user.set_viewsize() // reset to default
-	GLOB.moved_event.unregister(user, src, /datum/tgui_module/ship/proc/unlook)
+	GLOB.moved_event.unregister(user, src, TYPE_PROC_REF(/datum/tgui_module/ship, unlook))
 	LAZYREMOVE(viewers, weakref(user))
 
 /datum/tgui_module/ship/proc/viewing_overmap(mob/user)

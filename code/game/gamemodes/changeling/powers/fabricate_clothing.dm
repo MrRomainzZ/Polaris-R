@@ -20,7 +20,7 @@ var/global/list/changeling_fabricated_clothing = list(
 	ability_icon_state = "ling_fabricate_clothing"
 	genomecost = 1
 	power_category = CHANGELING_POWER_ENHANCEMENTS
-	verbpath = /mob/proc/changeling_fabricate_clothing
+	verbpath = TYPE_PROC_REF(/mob, changeling_fabricate_clothing)
 
 //Grows biological versions of chameleon clothes.
 /mob/proc/changeling_fabricate_clothing()

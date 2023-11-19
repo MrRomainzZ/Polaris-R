@@ -25,7 +25,7 @@ var/global/datum/antagonist/loyalists/loyalists
 	// Inround loyalists.
 	faction_role_text = "Loyalist"
 	faction_descriptor = "Company"
-	faction_verb = /mob/living/proc/convert_to_loyalist
+	faction_verb = TYPE_PROC_REF(/mob/living, convert_to_loyalist)
 	faction_welcome = "Preserve NanoTrasen's interests against the traitorous recidivists amongst the crew. Protect the heads of staff with your life."
 	faction_indicator = "loyal"
 	faction_invisible = 1

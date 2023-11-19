@@ -57,7 +57,7 @@
 	true_name = "[pick("Primary","Secondary","Tertiary","Quaternary")] [rand(1000,9999)]"
 
 	if(!roundstart)
-		addtimer(CALLBACK(src, .proc/request_player), 0)
+		addtimer(CALLBACK(src, PROC_REF(request_player)), 0)
 
 	return ..()
 

@@ -7,7 +7,7 @@
 	ability_icon_state = "ling_sting_del_toxin"
 	genomecost = 1
 	power_category = CHANGELING_POWER_STINGS
-	verbpath = /mob/proc/changeling_delayed_toxic_sting
+	verbpath = TYPE_PROC_REF(/mob, changeling_delayed_toxic_sting)
 
 /datum/modifier/delayed_toxin_sting
 	name = "delayed toxin injection"
@@ -26,7 +26,7 @@
 	set name = "Delayed Toxic Sting (20)"
 	set desc = "Injects the target with a toxin that will take effect after a few minutes."
 
-	var/mob/living/carbon/T = changeling_sting(20,/mob/proc/changeling_delayed_toxic_sting)
+	var/mob/living/carbon/T = changeling_sting(20,TYPE_PROC_REF(/mob, changeling_delayed_toxic_sting))
 	if(!T)
 		return 0
 	add_attack_logs(src,T,"Delayed toxic sting (chagneling)")

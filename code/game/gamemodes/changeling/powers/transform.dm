@@ -4,7 +4,7 @@
 	ability_icon_state = "ling_transform"
 	genomecost = 0
 	power_category = CHANGELING_POWER_INHERENT
-	verbpath = /mob/proc/changeling_transform
+	verbpath = TYPE_PROC_REF(/mob, changeling_transform)
 
 //Change our DNA to that of somebody we've absorbed.
 /mob/proc/changeling_transform()

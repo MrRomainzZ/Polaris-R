@@ -441,7 +441,7 @@
 	operating = 0
 
 	if(autoclose)
-		addtimer(CALLBACK(src, .proc/close), (normalspeed ? 100 : 5))
+		addtimer(CALLBACK(src, PROC_REF(close)), (normalspeed ? 100 : 5))
 
 	return 1
 

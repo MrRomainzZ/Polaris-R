@@ -36,7 +36,7 @@
 /obj/effect/accelerated_particle/Initialize(var/ml, newdir = 2)
 	. = ..()
 	set_dir(newdir)
-	addtimer(CALLBACK(src, .proc/move), 1)
+	addtimer(CALLBACK(src, PROC_REF(move)), 1)
 
 /obj/effect/accelerated_particle/Bump(atom/A)
 	if (A)

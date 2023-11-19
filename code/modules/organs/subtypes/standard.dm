@@ -288,9 +288,9 @@
 	if(model)
 		var/datum/robolimb/robohead = all_robolimbs[model]
 		if(robohead?.monitor_styles && robohead?.monitor_icon)
-			LAZYDISTINCTADD(organ_verbs, /mob/living/carbon/human/proc/setmonitor_state)
+			LAZYDISTINCTADD(organ_verbs, TYPE_PROC_REF(/mob/living/carbon/human, setmonitor_state))
 		else
-			LAZYREMOVE(organ_verbs, /mob/living/carbon/human/proc/setmonitor_state)
+			LAZYREMOVE(organ_verbs, TYPE_PROC_REF(/mob/living/carbon/human, setmonitor_state))
 		handle_organ_mod_special()
 
 /obj/item/organ/external/head/removed()

@@ -6,7 +6,7 @@
 	genomecost = 1
 	power_category = CHANGELING_POWER_ENHANCEMENTS
 	allowduringlesserform = 1
-	verbpath = /mob/proc/changeling_digitalcamo
+	verbpath = TYPE_PROC_REF(/mob, changeling_digitalcamo)
 
 //Prevents AIs tracking you but makes you easily detectable to the human-eye.
 /mob/proc/changeling_digitalcamo()

@@ -16,13 +16,13 @@
 /obj/item/assembly_holder/proc/attach(var/obj/item/assembly/D, var/obj/item/assembly/D2, var/mob/user)
 	if(!D || !D2)
 		return FALSE
-	
+
 	if(!istype(D) || !istype(D2))
 		return FALSE
 
 	if(D.secured || D2.secured)
 		return FALSE
-	
+
 	if(user)
 		user.remove_from_mob(D)
 		user.remove_from_mob(D2)
@@ -66,9 +66,9 @@
 /obj/item/assembly_holder/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
 	if(isturf(old_loc))
-		unsense_proximity(callback = /atom/proc/HasProximity, center = old_loc)
+		unsense_proximity(callback = TYPE_PROC_REF(/atom, HasProximity), center = old_loc)
 	if(isturf(loc))
-		sense_proximity(callback = /atom/proc/HasProximity)
+		sense_proximity(callback = TYPE_PROC_REF(/atom, HasProximity))
 
 /obj/item/assembly_holder/HasProximity(turf/T, atom/movable/AM, old_loc)
 	if(a_left)

@@ -227,7 +227,7 @@
 	if(istype(owner))
 		replaced(owner)
 		sync_colour_to_human(owner)
-	addtimer(CALLBACK(src, .proc/get_icon), 1)
+	addtimer(CALLBACK(src, PROC_REF(get_icon)), 1)
 
 /obj/item/organ/external/replaced(var/mob/living/carbon/human/target)
 	owner = target

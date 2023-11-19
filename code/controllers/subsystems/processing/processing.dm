@@ -9,7 +9,7 @@ SUBSYSTEM_DEF(processing)
 	var/stat_tag = "P" //Used for logging
 	var/list/processing = list()
 	var/list/currentrun = list()
-	var/process_proc = /datum/proc/process
+	var/process_proc = TYPE_PROC_REF(/datum, process)
 
 	var/debug_last_thing
 	var/debug_original_process_proc // initial() does not work with procs
@@ -56,7 +56,7 @@ SUBSYSTEM_DEF(processing)
 		debug_original_process_proc = null
 	else
 		debug_original_process_proc	= process_proc
-		process_proc = /datum/proc/DebugSubsystemProcess
+		process_proc = TYPE_PROC_REF(/datum, DebugSubsystemProcess)
 
 	to_chat(usr, "[name] - Debug mode [debug_original_process_proc ? "en" : "dis"]abled")
 

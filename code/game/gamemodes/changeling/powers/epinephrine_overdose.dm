@@ -6,7 +6,7 @@
 	ability_icon_state = "ling_epinepherine_overdose"
 	genomecost = 2
 	power_category = CHANGELING_POWER_ENHANCEMENTS
-	verbpath = /mob/proc/changeling_epinephrine_overdose
+	verbpath = TYPE_PROC_REF(/mob, changeling_epinephrine_overdose)
 
 /datum/modifier/unstoppable
 	name = "unstoppable"

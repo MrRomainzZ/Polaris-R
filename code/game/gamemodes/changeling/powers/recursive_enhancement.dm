@@ -1,5 +1,5 @@
 
-/// Intending to replace. 
+/// Intending to replace.
 /datum/power/changeling/recursive_enhancement
 	name = "Recursive Enhancement"
 	desc = "We cause our abilities to have increased or additional effects."
@@ -7,7 +7,7 @@
 	ability_icon_state = "ling_recursive_enhancement"
 	genomecost = 3
 	power_category = CHANGELING_POWER_ENHANCEMENTS
-	verbpath = /mob/proc/changeling_recursive_enhancement
+	verbpath = TYPE_PROC_REF(/mob, changeling_recursive_enhancement)
 
 //Increases macimum chemical storage
 /mob/proc/changeling_recursive_enhancement()

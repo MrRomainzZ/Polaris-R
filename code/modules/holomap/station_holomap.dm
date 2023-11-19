@@ -117,9 +117,9 @@
 			user.client.images |= holomap_datum.station_map
 
 			watching_mob = user
-			GLOB.moved_event.register(watching_mob, src, /obj/machinery/station_map/proc/checkPosition)
-			GLOB.dir_set_event.register(watching_mob, src, /obj/machinery/station_map/proc/checkPosition)
-			GLOB.destroyed_event.register(watching_mob, src, /obj/machinery/station_map/proc/stopWatching)
+			GLOB.moved_event.register(watching_mob, src, TYPE_PROC_REF(/obj/machinery/station_map, checkPosition))
+			GLOB.dir_set_event.register(watching_mob, src, TYPE_PROC_REF(/obj/machinery/station_map, checkPosition))
+			GLOB.destroyed_event.register(watching_mob, src, TYPE_PROC_REF(/obj/machinery/station_map, stopWatching))
 			update_use_power(USE_POWER_ACTIVE)
 
 			if(bogus)
